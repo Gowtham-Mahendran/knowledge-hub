@@ -1,0 +1,41 @@
+.md-header__title,
+.md-header__topic,
+.md-header__button.md-logo {
+  display: none !important;
+}
+
+.md-header__inner {
+  justify-content: center !important;   /* centers everything inside header */
+}
+
+.md-tabs {
+  justify-content: center !important;   /* centers tab bar if shown separately */
+}
+
+.md-tabs__list {
+  justify-content: center !important;
+}
+
+.md-header__option {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.md-nav__title .md-logo {
+  display: none !important;
+}
+
+/* ───────── Sleek custom footer styling ───────── */
+.custom-footer {
+  background: #f7f9fb;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.1rem 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #444;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}

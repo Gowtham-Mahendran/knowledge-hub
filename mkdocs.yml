@@ -1,0 +1,40 @@
+site_name: ""
+# site_url: https://power.gowt.dev
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: white
+      accent: black
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top 
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  logo: null
+  hide:
+    - title
+  include_search_page: false
+  include_nav_footer: false
+  custom_dir: overrides
+
+extra_css:
+- css/custom.css
+
+plugins: []
+
+docs_dir: source
+site_dir: docs 
+
+nav:
+  - Home: index.md
+  - Phasor Domain:
+    - Overview: phasor/index.md
+  - EMT Domain:
+    - Overview: phasor/index.md
+
