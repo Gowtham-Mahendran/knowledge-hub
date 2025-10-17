@@ -1,5 +1,5 @@
 site_name: ""
-# site_url: https://power.gowt.dev
+# site_url: https://gowt.dev
 theme:
   name: material
   palette:
@@ -33,8 +33,22 @@ site_dir: docs
 
 nav:
   - Home: index.md
-  - Phasor Domain:
-    - Overview: phasor/index.md
-  - EMT Domain:
-    - Overview: phasor/index.md
+  - Linux:
+    - Getting Started:
+      - Overview: Linux/Home.md
+      - First Things First: Linux/First-things-First.md
+    - System Setup:
+      - Customization: Linux/Customization.md
+      - Network Drives: Linux/Network-drives.md
+      - Tweaks: Linux/Tweaks.md
+    - Software:
+      - Common: Linux/Common-Softwares.md
+      - User Specific: Linux/User-specific-softwares.md
+    - Development:
+      - Git: Linux/Git.md
+      - Coding: Linux/Coding.md
+    - Debian 13 (Trixie): Linux/Trixie.md
+
+  - Power system:
+    - Overview: Power_systems/index.md
 
