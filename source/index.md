@@ -1,48 +1,32 @@
 ---
-title: Homepage
 hide:
   - navigation
   - toc
-  - title
 ---
 
-<section style="padding:3rem 1rem; max-width:900px; margin:auto;">
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
 
-    <div style="flex:1 1 320px; border:1px solid #ddd; border-radius:12px; padding:1.8rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-      <h2>🐧 Linux Notes</h2>
-      <p>
-        Learn everything from installing and configuring Debian (Trixie), to system tweaks,
-        software setup, and command-line productivity.
-      </p>
-      <ul style="text-align:left; line-height:1.6;">
-        <li><a href="linux/Home/">Overview</a></li>
-        <li><a href="linux/First-things-First/">First Things First</a></li>
-        <li><a href="linux/Customization/">Customization & Tweaks</a></li>
-        <li><a href="linux/Common-Softwares/">Common Software</a></li>
-        <li><a href="linux/Git/">Git & Coding</a></li>
-      </ul>
-      <a href="linux/Home/" class="md-button md-button--primary">Explore Linux Notes →</a>
-    </div>
-
-    <div style="flex:1 1 320px; border:1px solid #ddd; border-radius:12px; padding:1.8rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-      <h2>⚡ Power System Learnings</h2>
-      <p>
-        Dive into the fundamentals and dynamics of power systems —
-        from <b>Phasor-domain</b> to <b>EMT-domain</b> modeling, and everything between
-        steady state and transient studies.
-      </p>
-      <ul style="text-align:left; line-height:1.6;">
-        <li><a href="power_systems/index/">Overview</a></li>
-        <li><a href="power_systems/phasor/">Phasor Domain</a></li>
-        <li><a href="power_systems/emt/">EMT Domain</a></li>
-      </ul>
-      <a href="power_systems/index/" class="md-button md-button--primary">Explore Power Systems →</a>
-    </div>
-
-  </div>
+<section style="padding:1rem 1rem; text-align:center; background:#f9fafb;">
+  <h1 style="font-size:1.5rem; margin-bottom:1rem;">Knowledge Hub</h1>
+  <p style="max-width:720px; margin:0 auto; font-size:0.7rem; color:#444;">
+    A personal collection of documentation, covering Linux system setup and customization, along with 
+    foundational and advanced topics in power system modeling and analysis.
+  </p>
 </section>
 
-<footer style="text-align:center; padding:2rem; border-top:1px solid #eee; color:#555;">
-  © 2025 Gowtham Mahendran — Linux & Power System Learnings
-</footer>
+<section style="padding:3rem 1rem; max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+  <div style="flex:1 1 300px; background:white; border:1px solid #e0e0e0; border-radius:8px; padding:2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+    <h2 style="margin-bottom:1rem;">Linux Notes</h2>
+    <p style="color:#555; line-height:1.6;">
+      Notes on configuring and customizing Debian-based Linux systems. Covers setup, system tweaks, package management, network drives, user tools, and terminal productivity.
+    </p>
+    <a href="Linux/" class="md-button md-button--primary" style="margin-top:1.5rem;">Explore Linux Notes</a>
+  </div>
+
+  <div style="flex:1 1 300px; background:white; border:1px solid #e0e0e0; border-radius:8px; padding:2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+    <h2 style="margin-bottom:1rem;">Power System Learnings</h2>
+    <p style="color:#555; line-height:1.6;">
+      Documentation focused on phasor and EMT domain analysis of power systems. Includes steady-state, transient, and converter-dominant modeling techniques used in modern grids.
+    </p>
+    <a href="Power_systems/" class="md-button md-button--primary" style="margin-top:1.5rem;">Explore Power Systems</a>
+  </div>
+</section>

@@ -33,9 +33,10 @@ site_dir: docs
 
 nav:
   - Home: index.md
-  - Linux:
+  - Linux: 
+    - Overview: Linux/index.md
     - Getting Started:
-      - Overview: Linux/Home.md
+      - pre-work: Linux/Home.md
       - First Things First: Linux/First-things-First.md
     - System Setup:
       - Customization: Linux/Customization.md
