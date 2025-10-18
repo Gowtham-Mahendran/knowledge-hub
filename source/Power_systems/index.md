@@ -15,6 +15,7 @@ hide:
   <h1 style="text-align:center; font-size:1rem; margin-bottom:1rem;">Power System Classification</h1>
 
 ```mermaid
+%%| fig-align: center
 %%{init: {"theme": "base", "themeVariables": {
   "primaryColor": "#000000ff",
   "primaryTextColor": "#fff",
