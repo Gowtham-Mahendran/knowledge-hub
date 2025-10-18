@@ -92,3 +92,11 @@
   width: auto !important;
   margin: 0 auto !important;
 }
+
+.md-typeset .mermaid > svg[style] {
+  max-width: none !important;   /* ⬅ override inline attribute */
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
