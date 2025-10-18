@@ -86,6 +86,7 @@
 }
 
 .md-typeset .mermaid svg {
+  max-width: none !important;
   display: block !important;
   height: auto !important;
   width: auto !important;
