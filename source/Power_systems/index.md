@@ -67,13 +67,4 @@ flowchart TD
 <p style="text-align:center; justify-content:center; font-size:0.7rem; color:#666; font-style:italic; margin-top:0.5rem;">
   Reference: Power System Stability and Control - Second Edition
 </p>
-
-<style>
-.md-typeset .mermaid > svg {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  display: block !important;
-}
-</style>
 </div>
