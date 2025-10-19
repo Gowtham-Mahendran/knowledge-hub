@@ -35,12 +35,7 @@ ps2pdf input.ps
 
 PDF will be created without a encrypt password.
 
-
-Install curl to install uv
-
-```
-sudo aptitude install curl
-```
+## UV - astral
 
 then
 

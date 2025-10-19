@@ -127,3 +127,8 @@ sudo apt install aptitude
 
 In the Aptitude interface, press `/` to search package. Navigate using the arrow keys. To install packages, use the `+` key to select the packages and press `g` to start the installation process.
 
+Sometimes, `curl` is needed to install packages. You can install it using the `aptitude`
+
+```bash
+sudo aptitude install curl
+```
