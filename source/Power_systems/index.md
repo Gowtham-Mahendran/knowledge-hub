@@ -1,5 +1,5 @@
 ---
-title: Power systems
+title: Power-systems
 hide:
   - navigation
   - toc
