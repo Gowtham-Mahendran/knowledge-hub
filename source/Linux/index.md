@@ -13,15 +13,45 @@ hide:
   </p>
 </section>
 
-<section style="padding:2rem 1rem; max-width:800px; margin:auto;">
-  <ul style="list-style:none; padding:0; line-height:2; color:#333; font-size:0.7rem;">
-    <li><a href="First-things-First/">First Things First</a></li>
-    <li><a href="Customization/">System Customization</a></li>
-    <li><a href="Common-Softwares/">Common Software</a></li>
-    <li><a href="Git/">Git & Coding Setup</a></li>
-    <li><a href="Network-drives/">Network Drives</a></li>
-    <li><a href="Trixie/">Debian Trixie Setup</a></li>
-    <li><a href="Tweaks/">Tips and Tweaks</a></li>
-    <li><a href="User-specific-softwares/">User-Specific Tools</a></li>
-  </ul>
+<section style="padding:2rem 1rem; max-width:1200px; margin:auto;">
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1rem;">
+
+  <!-- Setup Group -->
+  <div style="border:1px solid #ccc; border-radius:8px; padding:1rem; background:#fff;">
+    <h3 style="margin:0 0 0.5rem 0; font-size:1rem;">Setup</h3>
+    <ul style="padding-left:1.2rem; margin:0; font-size:0.7rem; line-height:1;">
+      <li><a href="Setup/Debian-setup/">Debian Trixie Setup</a></li>
+      <li><a href="Setup/Network-drives/">Network Drives</a></li>
+      <li><a href="Setup/First-things-First/">First Things First</a></li>
+    </ul>
+  </div>
+
+  <!-- Customization Group -->
+  <div style="border:1px solid #ccc; border-radius:8px; padding:1rem; background:#fff;">
+    <h3 style="margin:0 0 0.5rem 0; font-size:1rem;">Customization</h3>
+    <ul style="padding-left:1.2rem; margin:0; font-size:0.7rem; line-height:1;">
+      <li><a href="Customization/Customization/">System Customization</a></li>
+      <li><a href="Customization/Tweaks/">Tips and Tweaks</a></li>
+    </ul>
+  </div>
+
+  <!-- Software Group -->
+  <div style="border:1px solid #ccc; border-radius:8px; padding:1rem; background:#fff;">
+    <h3 style="margin:0 0 0.5rem 0; font-size:1rem;">Software</h3>
+    <ul style="padding-left:1.2rem; margin:0; font-size:0.7rem; line-height:1;">
+      <li><a href="Software/Common-Softwares/">Common Software</a></li>
+      <li><a href="Software/User-specific-softwares/">User-Specific Tools</a></li>
+      <li><a href="Software/Coding/">Coding</a></li>
+    </ul>
+  </div>
+
+  <!-- Development Group -->
+  <div style="border:1px solid #ccc; border-radius:8px; padding:1rem; background:#fff;">
+    <h3 style="margin:0 0 0.5rem 0; font-size:1rem;">Development</h3>
+    <ul style="padding-left:1.2rem; margin:0; font-size:0.7rem; line-height:1;">
+      <li><a href="Development/Git/">Git & Coding Setup</a></li>
+    </ul>
+  </div>
+
+  </div>
 </section>

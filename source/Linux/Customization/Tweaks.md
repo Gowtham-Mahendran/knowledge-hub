@@ -1,26 +1,40 @@
-# Trixie
+# Tweaks
 
-In the starting, nothing can be installed. To install the packages we need to add debian repositories
+## De-encrypt a pdf
 
-```
-deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
-deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
-deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware
-deb http://deb.debian.org/debian trixie-backports main contrib non-free non-free-firmware
-```
-main → Free software (essential system & desktop packages)
-contrib → Free software that depends on non-free packages
-non-free → Non-free software (firmware, drivers, proprietary tools)
-non-free-firmware → Firmware now separated in Bookworm+ (needed for Wi-Fi, GPU firmware, etc.)
-security → Security updates for Trixie
-updates → Regular bugfix updates between point releases
-backports → Newer versions of packages (optional, but useful if you need fresh software)
-
-Install aptitude package manager
+1. Download `xpdf-utils' using `sudo apt-get install xpdf-utils`
 
 ```
-sudo apt install aptitude
+gowtham@deb-gowarc  ~  sudo apt-get install xpdf-utils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'poppler-utils' instead of 'xpdf-utils'
+poppler-utils is already the newest version (22.12.0-2+deb12u1).
+poppler-utils set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libslirp0 pigz slirp4netns
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 ```
+
+2. Debian is telling you that `xpdf-utils` has been replaced by `poppler-utils`, so when you try to install `xpdf-utils`, it just installs (or confirms you already have) `poppler-utils`.
+
+3. Go to the directory. To decrypt a PDF and create a postscript file
+
+```
+pdftops -upw YOURPASSWORD-HERE input.pdf
+```
+
+This will create `input.ps` file. 
+
+4. To convert `.ps` file (postscript) back to a `PDF`:
+```
+ps2pdf input.ps
+```
+
+PDF will be created without a encrypt password.
+
 
 Install curl to install uv
 
@@ -69,27 +83,6 @@ To connect, use `sudo` and authenticate the login.
 gowtham@debian:~$ sudo gpclient connect <gateway>
 ```
 
-
-
-## Git 
-
-Clone the repo and set the url 
-
-`git remote set-url origin https://github.com/Gowtham-Mahendran/operation_linux.git`
-
-Then, use 
-
-`git config credential.helper store`
-
-and enter the user name. For password enter the PAT generated from the Github
-
-Now you can push to the repo.
-
-To view the passwords, use
-
-`cat ~/.git-credentials` 
-
-
 ## Latex
 
 `sudo aptitude install texlive-full`
@@ -129,3 +122,8 @@ This `pdflatex` is the one which is used by vscode to compile latex
 
 Now in vscode install `latex workshop` extension by James-Yu.
 
+## Emoji
+
+[Link](https://gist.github.com/rxaviers/7360908)
+
+[admonitons](https://jimandreas.github.io/mkdocs-material/reference/admonitions/) for putting notes in markdown

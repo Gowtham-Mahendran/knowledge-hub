@@ -181,69 +181,6 @@ fi
    ping www.google.com
    ```
 
-## 2. Fixing DVD Source
-
-After trying to install Thunderbird via `apt`, the system prompted for the installation DVD:
-
-   *Media change: please insert the disc labeled 'Debian GNU/Linux 12.11.0 ...'*
-
-This means the system was still using the DVD as a source for packages.
-
-***Solution:***
-
-1. Open the sources list:
-   ```
-   sudo nano /etc/apt/sources.list
-   ```
-
-2. Comment out the CD/DVD source line:
-
-   ```
-   # deb cdrom:[Debian GNU/Linux 12.11.0 _Bookworm_ ...]
-   ```
-
-3. Add the following online sources (if not already present):
-
-   ```
-   deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
-   deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-   deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
-   ```
-
-4. Save and exit Nano:
-   ```
-   Ctrl + O, Enter to save
-   Ctrl + X to exit
-   ```
-
-5. Update package lists:
-
-   ```
-   sudo apt update
-   ```
-
-
-3. Checking for Available Package Upgrades
-
-   To find packages that had available updates:
-
-   ``` 
-   apt list --upgradable
-   ```
-
-   This listed 56 packages, including updates for: Firefox ESR, GIMP, Systemd, Kernel, WebKit, udev, GStreamer, ca-certificates etc.,
-
-4. Performing a Full Upgrade
-
-   To upgrade all listed packages:
-   ```
-   sudo apt upgrade
-   ```
-   And then (recommended) reboot for kernel/system updates to take effect:
-   ```
-   sudo reboot
-   ```
-
 ## 3. Installing Thunderbird
 
 Once the sources were fixed, Thunderbird could be installed normally:
@@ -254,8 +191,6 @@ Once the sources were fixed, Thunderbird could be installed normally:
 
 
 This downloaded the package from online mirrors instead of prompting for the DVD.
-
-
 
 ## 4. Fullscreen
 

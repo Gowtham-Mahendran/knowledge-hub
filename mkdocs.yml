@@ -26,6 +26,9 @@ theme:
 extra_css:
 - css/custom.css
 
+markdown_extensions:
+  - admonition
+
 plugins:
   - search
   - mermaid2
@@ -38,19 +41,18 @@ nav:
   - Linux: 
     - Overview: Linux/index.md
     - Getting Started:
-      - pre-work: Linux/Home.md
-      - First Things First: Linux/First-things-First.md
+      - Debian-setup: Linux/Setup/Debian-setup.md
+      - First Things First: Linux/Setup/First-things-First.md
+      - Network Drives: Linux/Setup/Network-drives.md
     - System Setup:
-      - Customization: Linux/Customization.md
-      - Network Drives: Linux/Network-drives.md
-      - Tweaks: Linux/Tweaks.md
+      - Customization: Linux/Customization/Customization.md
+      - Tweaks: Linux/Customization/Tweaks.md
     - Software:
-      - Common: Linux/Common-Softwares.md
-      - User Specific: Linux/User-specific-softwares.md
+      - Common: Linux/Software/Common-Softwares.md
+      - User Specific: Linux/Software/User-specific-softwares.md
+      - Coding: Linux/Software/Coding.md
     - Development:
-      - Git: Linux/Git.md
-      - Coding: Linux/Coding.md
-    - Debian 13 (Trixie): Linux/Trixie.md
+      - Git: Linux/Development/Git.md
 
   - Power system:
     - Overview: Power_systems/index.md

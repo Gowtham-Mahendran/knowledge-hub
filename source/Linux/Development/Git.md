@@ -131,3 +131,62 @@ In `index.rst`, include the code to read the pages,
 Create a folder called `pages` inside `sources` and copy paste all the `.md` files from `wiki`.
 
 Now run sphinx and copy all the files inside `build` to `docs` in the main dir. Add `.nojekyll` file inside `docs/` so that the static files are rendered.
+
+
+
+
+Clone the repo and set the url 
+
+`git remote set-url origin https://github.com/Gowtham-Mahendran/operation_linux.git`
+
+Then, use 
+
+`git config credential.helper store`
+
+and enter the user name. For password enter the PAT generated from the Github
+
+Now you can push to the repo.
+
+To view the passwords, use
+
+`cat ~/.git-credentials` 
+
+
+
+
+
+## Git
+
+To check which user the repo is linked to,
+
+```bash
+git config --get user.name
+git config --get user.email
+```
+
+To check all the details,
+
+```bash
+git config --list
+```
+
+To set the repo to a user and mail,
+```bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+Omit `--global` to set the identity only in this repository.
+
+Git doesn't allow changes by password. It will accept only Personalized Access Tokens (PAT). So, the remote url should have PAT included. To change this,
+
+Profile > Settings > Developer settings > PAT > Fine-grained tokens
+
+**Grant these permissions:**
+
+* Read access to metadata
+* Read and Write access to code
+
+```bash
+git remote set-url origin https://<username>:<PAT>@github.com/<username>/<repo_name>.git
+```

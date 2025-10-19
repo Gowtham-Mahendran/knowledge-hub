@@ -486,57 +486,7 @@ Now run `c2000setup` in matlab
 <img width="681" height="509" alt="image" src="https://github.com/user-attachments/assets/09814df8-654b-427e-8852-5d4eb6315332" />
 
 
-## 2. GlobalProtect VPN
-
-   GlobalProtect offers you two different methods to install the GlobalProtect app on your Linux device: a GUI-based installation version and a CLI version. If you use a supported Linux operating system that supports a graphical interface, you can install the GUI version of the GlobalProtect; otherwise, download and install the CLI version of the GlobalProtect app. [Reference](https://docs.paloaltonetworks.com/globalprotect/5-1/globalprotect-app-user-guide/globalprotect-app-for-linux/download-and-install-the-globalprotect-app-for-linux#id181NC050F59)
-
-   1. Download GUI version and install the .deb file by double clicking on it
-   2. Restart the system
-   3. Use one of the [gateway](https://uol.de/en/icbm/it/it-security/2-faktor-authentifizierung/globalprotect-vpn) 
-
-   ```
-   v-uol.uol.de
-   v.uol.de
-   ```
-
-   4. To uninstall
-
-   ```
-   apt-get remove globalprotect
-   ```
-   
-   5. Verify the connection
-   ```
-gowtham@deb-gowarc:~$ nmcli connection show --active
-NAME      UUID                     TYPE      DEVICE 
-easyroam  bb788f1f-0991-4143-aed0  wifi      wlo1   
-gpd0      8c897b6a-a5bd-423e-93aa  tun       gpd0   
-lo        9ec90b71-7d0c-4bfb-83f0  loopback  lo     
-gowtham@deb-gowarc:~$ ping www.debian.org
-PING www.debian.org(klecker.debian.org (2001:67c:2564:a119::77)) 56 data bytes
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=1 ttl=47 time=20.6 ms
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=2 ttl=47 time=46.2 ms
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=3 ttl=47 time=148 ms
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=4 ttl=47 time=66.1 ms
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=5 ttl=47 time=192 ms
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=6 ttl=47 time=112 ms
-64 bytes from klecker.debian.org (2001:67c:2564:a119::77): icmp_seq=7 ttl=47 time=136 ms
-^C
---- www.debian.org ping statistics ---
-7 packets transmitted, 7 received, 0% packet loss, time 6010ms
-rtt min/avg/max/mdev = 20.579/102.865/191.882/56.575 ms
-gowtham@deb-gowarc:~$ nmcli connection show --active
-NAME      UUID                                  TYPE      DEVICE 
-easyroam  bb788f1f-0991-4143-aed0-30925a220183  wifi      wlo1   
-lo        9ec90b71-7d0c-4bfb-83f0-f06ad342060c  loopback  lo     
-   ```
-
-`gpd0` is a virtual network interface created when you connect via GlobalProtect, the Palo Alto Networks VPN client.
-
-The TYPE is `tun`, which stands for TUNnel — a software-only (non-ethernet) point-to-point device.
-
-
-## 3. KiCAD - Debian Backports
+## 2. KiCAD - Debian Backports
 
 Debian’s Backports archive is an official way to get newer (“back-ported”) versions of packages on your stable system without sacrificing its overall stability. Backports is a separate APT repository (e.g. bookworm-backports for Debian 12) that Debian maintainers populate with newer releases of software originally built for Debian Testing or Unstable. Stable’s main archive often has older releases (e.g. KiCad 6 in Debian 12). Backports let you get KiCad 9 (or other up-to-date software) without waiting for the next Debian release. [Refer](https://www.kicad.org/download/linux/)
 
@@ -556,7 +506,7 @@ sudo apt install -t bookworm-backports kicad
 The -t flag in APT stands for “target release” (it’s shorthand for --target-release). It tells APT which release (or suite) you want to pull a package from, rather than using the default “stable” archive.
 
 
-## 4. Zotero - citation management software
+## 3. Zotero - citation management software
 
 The Git repo is [here](https://github.com/retorquere/zotero-deb) for deb. It is reccognized officially by [zotero](https://www.zotero.org/support/installation).
 
