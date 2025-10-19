@@ -1,4 +1,5 @@
 ---
+title: Power systems
 hide:
   - navigation
   - toc
