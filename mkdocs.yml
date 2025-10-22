@@ -3,35 +3,56 @@ site_name: "gowt.dev"
 theme:
   name: material
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: white
       accent: black
-    - scheme: slate
-      primary: deep orange
-      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.tabs
-    - navigation.sections
+    # - navigation.sections
     - navigation.top 
+    # - navigation.tabs.sticky
     - content.code.copy
     - search.suggest
-    - search.highlight
+    - toc.integrate
+
   logo: null
   hide:
     - title
   include_search_page: false
-  include_nav_footer: false
   custom_dir: overrides
+  
+
+extra:
+  generator: false
 
 extra_css:
 - css/custom.css
 
 markdown_extensions:
   - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
 
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      arguments:
+        theme: |
+          ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
 
 docs_dir: source
 site_dir: docs 

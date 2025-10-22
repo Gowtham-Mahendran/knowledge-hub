@@ -77,6 +77,7 @@
     </div>
     
     
+  
       
 
 <header class="md-header" data-md-component="header">
@@ -114,13 +115,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -178,6 +187,30 @@
   
 </header>
     
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const paletteForm = document.querySelector("form[data-md-component='palette']");
+      const searchForm = document.querySelector("form[data-md-component='search']");
+      const headerInner = document.querySelector(".md-header__inner");
+
+      if (paletteForm && searchForm && headerInner) {
+        // Insert palette form just after the search form
+        searchForm.insertAdjacentElement('afterend', paletteForm);
+      }
+
+      const palette0 = document.getElementById("__palette_0");
+      const palette1 = document.getElementById("__palette_1");
+
+      if (palette0) {
+        palette0.addEventListener("change", () => location.reload());
+      }
+
+      if (palette1) {
+        palette1.addEventListener("change", () => location.reload());
+      }
+    });
+  </script>
+
     <div class="md-container" data-md-component="container">
       
       
@@ -271,7 +304,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="gowt.dev" class="md-nav__button md-logo" aria-label="gowt.dev" data-md-component="logo">
       
@@ -325,8 +360,6 @@
     
     
       
-      
-        
       
     
     
@@ -391,8 +424,6 @@
     
     
       
-      
-        
       
     
     
@@ -512,8 +543,6 @@
     
       
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -608,8 +637,6 @@
     
     
       
-      
-        
       
     
     
@@ -729,8 +756,6 @@
     
       
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -810,8 +835,6 @@
     
       
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -878,24 +901,6 @@
               </div>
             
             
-              
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -907,26 +912,26 @@
 
 
 
-<section style="padding:1rem 1rem; text-align:center; background:#f9fafb;">
-  <h1 style="font-size:1.5rem; margin-bottom:1rem;">Knowledge Hub</h1>
-  <p style="max-width:720px; margin:0 auto; font-size:0.7rem; color:#444;">
+<section style="padding:1rem 1rem; text-align:center;">
+  <h1 style="font-size:1.5rem; margin-bottom:1rem;font-weight:bold;">Knowledge Hub</h1>
+  <p style="max-width:720px; margin:0 auto; font-size:0.7rem;">
     A personal collection of documentation, covering Linux system setup and customization, along with 
     foundational and advanced topics in power system modeling and analysis.
   </p>
 </section>
 
 <section style="padding:3rem 1rem; max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
-  <div style="flex:1 1 300px; background:white; border:1px solid #e0e0e0; border-radius:8px; padding:2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-    <h2 style="margin-bottom:1rem;">Linux Notes</h2>
-    <p style="color:#555; line-height:1.6;">
+  <div style="flex:1 1 300px; border:1px solid; border-radius:8px; padding:1rem;">
+    <h2 style="margin-bottom:1rem;font-weight:bold;">Linux Notes</h2>
+    <p style="line-height:1.6;">
       Notes on configuring and customizing Debian-based Linux systems. Covers setup, system tweaks, package management, network drives, user tools, and terminal productivity.
     </p>
     <a href="Linux/" class="md-button md-button--primary" style="margin-top:1.5rem;">Explore Linux Notes</a>
   </div>
 
-  <div style="flex:1 1 300px; background:white; border:1px solid #e0e0e0; border-radius:8px; padding:2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-    <h2 style="margin-bottom:1rem;">Power System Learnings</h2>
-    <p style="color:#555; line-height:1.6;">
+  <div style="flex:1 1 300px; border:1px solid; border-radius:8px; padding:1rem;">
+    <h2 style="margin-bottom:1rem;font-weight:bold;">Power System Learnings</h2>
+    <p style="line-height:1.6;">
       Documentation focused on phasor and EMT domain analysis of power systems. Includes steady-state, transient, and converter-dominant modeling techniques used in modern grids.
     </p>
     <a href="Power_systems/" class="md-button md-button--primary" style="margin-top:1.5rem;">Explore Power Systems</a>
@@ -980,7 +985,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "content.code.copy", "search.suggest", "toc.integrate"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>

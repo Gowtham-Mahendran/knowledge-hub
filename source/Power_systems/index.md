@@ -5,28 +5,23 @@ hide:
   - toc
 ---
 
-<section style="padding:1rem 1rem; text-align:center; background:#f9fafb;">
-  <h1 style="font-size:1rem; margin-bottom:1rem;">Power System Notes</h1>
-  <p style="max-width:720px; margin:0 auto; font-size:0.7rem; color:#444;">
+<section style="padding:1rem 1rem; text-align:center;">
+  <h1 style="font-size:1rem; margin-bottom:1rem;font-weight:bold;">Power System Notes</h1>
+  <p style="max-width:720px; margin:0 auto; font-size:0.7rem;">
     Documentation on foundational and advanced modeling techniques in power systems — including phasor-domain and EMT-domain analysis with applications in grid stability, renewables, and converter behavior.
   </p>
 </section>
 
 <div style="justify-content:center; overflow-x:auto; padding:1rem;">
-  <h1 style="text-align:center; font-size:1rem; margin-bottom:1rem;">Power System Classification</h1>
+  <h1 style="text-align:center; font-size:1rem; margin-bottom:1rem;font-weight:bold;">Power System Classification</h1>
 
 ```mermaid
 %%| fig-align: center
-%%{init: {"theme": "base", "themeVariables": {
-  "primaryColor": "#000000ff",
-  "primaryTextColor": "#fff",
-  "fontSize": "14px",
-  "fontFamily": "Inter, sans-serif"
-  },
+%%{init: {
   "flowchart": {
     "curve": "linear"
   }
-  }}%%
+}}%%
 
 flowchart TD
     %% Root
@@ -60,18 +55,15 @@ flowchart TD
     click D "/stability/voltage" "Voltage Stability"
     click D1 "/stability/large-disturbance-voltage" "Large Disturbance Voltage Stability"
     click D2 "/stability/small-disturbance-voltage" "Small Disturbance Voltage Stability"
-
-    %% Styling
-    classDef root fill:#2563eb,color:#fff,stroke:none,font-weight:bold;
-    classDef default fill:#fff,stroke:#2563eb,stroke-width:1px,color:#111;
 ```
-<p style="text-align:center; justify-content:center; font-size:0.7rem; color:#666; font-style:italic; margin-top:0.5rem;">
+
+<p style="text-align:center; justify-content:center; font-size:0.7rem; font-style:italic; margin-top:0.5rem;">
   Reference: Power System Stability and Control - Second Edition
 </p>
 
 <style>
 .md-typeset .mermaid > svg {
-  max-width: none !important;
+  max-width: none !important; 
   width: 100% !important;
   margin: 0 auto !important;
   display: block !important;

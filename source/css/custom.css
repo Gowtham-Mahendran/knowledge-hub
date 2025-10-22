@@ -4,35 +4,24 @@
   display: none !important;
 }
 
-.md-header__inner {
-  justify-content: center !important;   /* centers everything inside header */
-}
+/* .md-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
 
-.md-tabs {
-  justify-content: center !important;   /* centers tab bar if shown separately */
-}
-
-.md-tabs__list {
-  justify-content: center !important;
-}
-
-.md-header__option {
-  margin-left: auto !important;
-  margin-right: auto !important;
+.md-header__option[data-md-component="palette"] {
+  margin-left: auto;
 }
 
 .md-nav__title .md-logo {
   display: none !important;
 }
 
-/* ───────── Sleek custom footer styling ───────── */
 .custom-footer {
-  background: #f7f9fb;
-  border-top: 1px solid #e0e0e0;
   padding: 0.1rem 0;
   text-align: center;
   font-size: 0.7rem;
-  color: #444;
 }
 
 .footer-container {
@@ -40,35 +29,37 @@
   margin: 0 auto;
 }
 
-.md-typeset h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #222;
-  /* margin-top: 2rem;
-  margin-bottom: 1rem; */
-}
-
-.md-typeset h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #333;
-  /* margin-top: 1.8rem;
-  margin-bottom: 0.8rem; */
-}
-
-.md-typeset h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
+/* Light mode */
+[data-md-color-scheme="default"] .custom-footer {
+  background: #f7f9fb;
+  border-top: 1px solid #e0e0e0;
   color: #444;
-  /* margin-top: 1.5rem;
-  margin-bottom: 0.5rem; */
 }
 
-.md-typeset p {
-  color: #555;
-  /* font-size: 1.05rem;
-  line-height: 1.75; */
+/* Dark mode */
+[data-md-color-scheme="slate"] .custom-footer {
+  background: #3f51b5;
+  border-top: 1px solid #333;
+  color: #ccc;
 }
+
+/* Base styling
+.custom-section {
+  padding: 1rem 1rem;
+  text-align: center;
+  background-color: var(--custom-section-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Light mode */
+/* [data-md-color-scheme="default"] .custom-section {
+  --custom-section-bg: #f9fafb;
+} */
+
+/* Dark mode */
+/* [data-md-color-scheme="slate"] .custom-section {
+  --custom-section-bg: #0A2647;
+} */
 
 /* Style top-level sidebar section titles */
 .md-nav__item--section > .md-nav__link {

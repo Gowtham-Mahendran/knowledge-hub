@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block header %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const paletteForm = document.querySelector("form[data-md-component='palette']");
+      const searchForm = document.querySelector("form[data-md-component='search']");
+      const headerInner = document.querySelector(".md-header__inner");
+
+      if (paletteForm && searchForm && headerInner) {
+        // Insert palette form just after the search form
+        searchForm.insertAdjacentElement('afterend', paletteForm);
+      }
+
+      const palette0 = document.getElementById("__palette_0");
+      const palette1 = document.getElementById("__palette_1");
+
+      if (palette0) {
+        palette0.addEventListener("change", () => location.reload());
+      }
+
+      if (palette1) {
+        palette1.addEventListener("change", () => location.reload());
+      }
+    });
+  </script>
+{% endblock %}
