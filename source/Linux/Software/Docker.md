@@ -1,30 +1,5 @@
-# Coding
 
-## 1. VSCodium
-
-Here is the official guide from the VSCodium [website](https://vscodium.com/)
-
-1. Add the GPG key of the repository:
-```bash
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-   | gpg --dearmor \
-   | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-```
-
-2. Add the repository:
-```bash
-echo 'deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg] https://download.vscodium.com/debs vscodium main' \
-   | sudo tee /etc/apt/sources.list.d/vscodium.list
-```
-3. Update then install vscodium (if you want vscodium-insiders, then replace codium by codium-insiders):
-```bash
-sudo apt update && sudo apt install codium
-```
-
-4. To open VSCodium, execute `codium` in terminal
-
-
-## 2. Docker Desktop
+# Docker Desktop
 
 1. KVM virtualization support - [Refer](https://docs.docker.com/desktop/setup/install/linux/)
 
@@ -36,20 +11,25 @@ KVM (Kernel-based Virtual Machine) is a Linux kernel module that enables your sy
 * Use hardware-accelerated virtualization
 
 To Check if your CPU supports virtualization:
-   ```
+
+```bash
 egrep -c '(vmx|svm)' /proc/cpuinfo
-   ```
+```
+
 If output is 0: your CPU doesn’t support virtualization or it’s disabled in BIOS. If >0: your CPU supports virtualization. Also, make sure virtualization is enabled in BIOS/UEFI.
 
 
 To check if the KVM modules are enabled, run:
-   ```
-gowtham@deb-gowarc:~$ lsmod | grep kvm
+```bash
+lsmod | grep kvm
+```
+
+```bash
 kvm_amd               163840  0
 kvm                  1146880  1 kvm_amd
 irqbypass              16384  1 kvm
 ccp                   118784  1 kvm_amd
-   ```
+```
 
 [Set up KVM device user permissions](https://docs.docker.com/desktop/setup/install/linux/#set-up-kvm-device-user-permissions)
 To check ownership of /dev/kvm, run :

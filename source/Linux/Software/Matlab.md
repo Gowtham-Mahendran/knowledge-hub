@@ -1,27 +1,25 @@
-# User specific softwares
+# MATLAB installation
 
-## 1. MATLAB installation
+1. Download the iso file for linux
 
-   1. Download the iso file for linux
-   
-   2. Suppose your ISO is called matlab_R2025a_glnxa64.iso and located in your Downloads folder:
-   ```
-   cd ~/Downloads
-   mkdir matlab_iso
-   mount -o loop matlab_R2025a_glnxa64.iso matlab_iso
-   ```
+2. Suppose your ISO is called matlab_R2025a_glnxa64.iso and located in your Downloads folder:
+```
+cd ~/Downloads
+mkdir matlab_iso
+mount -o loop matlab_R2025a_glnxa64.iso matlab_iso
+```
 
-   3. After mounting, files are extracted to `matlab_iso` folder
+3. After mounting, files are extracted to `matlab_iso` folder
 
-   4. Now run the installation script in `user` terminal and not in `root`
-   ```
-   cd matlab_iso
-   ./install
-   ```
-   
-   5. During installation, select the preferred path. After installation, open terminal and enter the path to verify MATLAB.
+4. Now run the installation script in `user` terminal and not in `root`
+```
+cd matlab_iso
+./install
+```
 
-   ```
+5. During installation, select the preferred path. After installation, open terminal and enter the path to verify MATLAB.
+
+```
 gowtham@deb-gowarc:~$ /home/gowtham/MATLAB/R2024a/bin/matlab -desktop &
 [1] 2757
 gowtham@deb-gowarc:~$ MATLAB is selecting SOFTWARE rendering.
@@ -33,23 +31,23 @@ MESA-LOADER: failed to open kms_swrast: /usr/lib/dri/kms_swrast_dri.so: cannot o
 failed to load driver: kms_swrast
 MESA-LOADER: failed to open swrast: /usr/lib/dri/swrast_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/x86_64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri, suffix _dri)
 failed to load swrast driver
-   ```
-   MATLAB will start automatically.
+```
+MATLAB will start automatically.
 
-   6. That error means MATLAB's graphics system can't find the OpenGL drivers (Mesa DRI), so it falls back to software rendering, which is slower and might cause GUI glitches.
+6. That error means MATLAB's graphics system can't find the OpenGL drivers (Mesa DRI), so it falls back to software rendering, which is slower and might cause GUI glitches.
 
 You're missing the required `.so` driver libraries, such as: radeonsi_dri.so (for AMD GPUs), swrast_dri.so (software fallback) and zink_dri.so (generic fallback)
-   ```
+```
 sudo apt update
 sudo apt install libgl1-mesa-glx libgl1-mesa-dri mesa-utils
-   ```
+```
 
 Restart MATLAB
 
-   7. Open MATLAB using
-   ```
+7. Open MATLAB using
+```
 /home/gowtham/MATLAB/R2024a/bin/matlab   
-   ```
+```
 
 Run opengl info in MATLAB command window
    ```
@@ -484,38 +482,3 @@ Now run `c2000setup` in matlab
 
 
 <img width="681" height="509" alt="image" src="https://github.com/user-attachments/assets/09814df8-654b-427e-8852-5d4eb6315332" />
-
-
-## 2. KiCAD - Debian Backports
-
-Debian’s Backports archive is an official way to get newer (“back-ported”) versions of packages on your stable system without sacrificing its overall stability. Backports is a separate APT repository (e.g. bookworm-backports for Debian 12) that Debian maintainers populate with newer releases of software originally built for Debian Testing or Unstable. Stable’s main archive often has older releases (e.g. KiCad 6 in Debian 12). Backports let you get KiCad 9 (or other up-to-date software) without waiting for the next Debian release. [Refer](https://www.kicad.org/download/linux/)
-
-To use backports, we need to enable the backports repo,
-```
-echo "deb http://deb.debian.org/debian bookworm-backports main contrib non-free" \
-  | sudo tee /etc/apt/sources.list.d/bookworm-backports.list
-```
-Then update apt using
-```
-sudo apt update
-```
-Now install KiCAD using,
-```
-sudo apt install -t bookworm-backports kicad
-```
-The -t flag in APT stands for “target release” (it’s shorthand for --target-release). It tells APT which release (or suite) you want to pull a package from, rather than using the default “stable” archive.
-
-
-## 3. Zotero - citation management software
-
-The Git repo is [here](https://github.com/retorquere/zotero-deb) for deb. It is reccognized officially by [zotero](https://www.zotero.org/support/installation).
-
-Install the zotero connector extension in the browser, so that the papers can be directly added to zotero
-
-create an account and setup in zotero for cloud sync
-
-A list of [plugins](https://www.zotero.org/support/plugins) can be found here.
-
-For network visualization, use [cita](https://github.com/diegodlh/zotero-cita). Unfortunaltely it does not support Zotero 7
-
-You can choose upto 9 colors for tags. Use this.

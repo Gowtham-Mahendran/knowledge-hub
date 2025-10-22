@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Common-Softwares/">
+        <link rel="prev" href="../Mini-forge/">
       
       
-        <link rel="next" href="../Coding/">
+        <link rel="next" href="../Codium/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>User Specific - gowt.dev</title>
+        <title>Matlab - gowt.dev</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#user-specific-softwares" class="md-skip">
+        <a href="#matlab-installation" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Specific
+              Matlab
             
           </span>
         </div>
@@ -509,12 +509,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Setup/Network-drives/" class="md-nav__link">
+      <a href="../../Setup/Common-problems/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Network Drives
+    Common Problems
     
   </span>
   
@@ -678,12 +678,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../Common-Softwares/" class="md-nav__link">
+      <a href="../Docker/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Common
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mini-forge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mini-forge
     
   </span>
   
@@ -715,7 +738,7 @@
   
   
   <span class="md-ellipsis">
-    User Specific
+    Matlab
     
   </span>
   
@@ -728,7 +751,7 @@
   
   
   <span class="md-ellipsis">
-    User Specific
+    Matlab
     
   </span>
   
@@ -751,26 +774,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-matlab-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. MATLAB installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. MATLAB installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#c2000-setup" class="md-nav__link">
     <span class="md-ellipsis">
       C2000 Setup
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -798,24 +806,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2-kicad-debian-backports" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. KiCAD - Debian Backports
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-zotero-citation-management-software" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Zotero - citation management software
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -832,12 +822,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../Coding/" class="md-nav__link">
+      <a href="../Codium/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Coding
+    Codium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zotero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kicad
     
   </span>
   
@@ -1022,15 +1058,14 @@
 
 
 
-<h1 id="user-specific-softwares">User specific softwares</h1>
-<h2 id="1-matlab-installation">1. MATLAB installation</h2>
+<h1 id="matlab-installation">MATLAB installation</h1>
 <ol>
 <li>
 <p>Download the iso file for linux</p>
 </li>
 <li>
 <p>Suppose your ISO is called matlab_R2025a_glnxa64.iso and located in your Downloads folder:
-   <div class="highlight"><pre><span></span><code>cd ~/Downloads
+<div class="highlight"><pre><span></span><code>cd ~/Downloads
 mkdir matlab_iso
 mount -o loop matlab_R2025a_glnxa64.iso matlab_iso
 </code></pre></div></p>
@@ -1040,7 +1075,7 @@ mount -o loop matlab_R2025a_glnxa64.iso matlab_iso
 </li>
 <li>
 <p>Now run the installation script in <code>user</code> terminal and not in <code>root</code>
-   <div class="highlight"><pre><span></span><code>cd matlab_iso
+<div class="highlight"><pre><span></span><code>cd matlab_iso
 ./install
 </code></pre></div></p>
 </li>
@@ -1048,7 +1083,7 @@ mount -o loop matlab_R2025a_glnxa64.iso matlab_iso
 <p>During installation, select the preferred path. After installation, open terminal and enter the path to verify MATLAB.</p>
 </li>
 </ol>
-<p><code>gowtham@deb-gowarc:~$ /home/gowtham/MATLAB/R2024a/bin/matlab -desktop &amp;
+<p><div class="highlight"><pre><span></span><code>gowtham@deb-gowarc:~$ /home/gowtham/MATLAB/R2024a/bin/matlab -desktop &amp;
 [1] 2757
 gowtham@deb-gowarc:~$ MATLAB is selecting SOFTWARE rendering.
 MESA-LOADER: failed to open radeonsi: /usr/lib/dri/radeonsi_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/x86_64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri, suffix _dri)
@@ -1058,18 +1093,21 @@ failed to load driver: zink
 MESA-LOADER: failed to open kms_swrast: /usr/lib/dri/kms_swrast_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/x86_64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri, suffix _dri)
 failed to load driver: kms_swrast
 MESA-LOADER: failed to open swrast: /usr/lib/dri/swrast_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/x86_64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri, suffix _dri)
-failed to load swrast driver</code>
-   MATLAB will start automatically.</p>
+failed to load swrast driver
+</code></pre></div>
+MATLAB will start automatically.</p>
 <ol>
 <li>That error means MATLAB's graphics system can't find the OpenGL drivers (Mesa DRI), so it falls back to software rendering, which is slower and might cause GUI glitches.</li>
 </ol>
 <p>You're missing the required <code>.so</code> driver libraries, such as: radeonsi_dri.so (for AMD GPUs), swrast_dri.so (software fallback) and zink_dri.so (generic fallback)
-   <code>sudo apt update
-sudo apt install libgl1-mesa-glx libgl1-mesa-dri mesa-utils</code></p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install libgl1-mesa-glx libgl1-mesa-dri mesa-utils
+</code></pre></div></p>
 <p>Restart MATLAB</p>
 <ol>
 <li>Open MATLAB using
-   <code>/home/gowtham/MATLAB/R2024a/bin/matlab</code></li>
+<div class="highlight"><pre><span></span><code>/home/gowtham/MATLAB/R2024a/bin/matlab   
+</code></pre></div></li>
 </ol>
 <p>Run opengl info in MATLAB command window
    ```</p>
@@ -1391,26 +1429,6 @@ c2000  ccs1240  CCSExternalReferences  tirex-localserver-3.7.1
 <p><img width="681" height="510" alt="image" src="https://github.com/user-attachments/assets/c1775602-0f6f-4f3b-a473-6e069a50fa17" /></p>
 <p><img width="681" height="505" alt="image" src="https://github.com/user-attachments/assets/6556aaf4-da3c-47c1-8c5a-041f67742244" /></p>
 <p><img width="681" height="509" alt="image" src="https://github.com/user-attachments/assets/09814df8-654b-427e-8852-5d4eb6315332" /></p>
-<h2 id="2-kicad-debian-backports">2. KiCAD - Debian Backports</h2>
-<p>Debian’s Backports archive is an official way to get newer (“back-ported”) versions of packages on your stable system without sacrificing its overall stability. Backports is a separate APT repository (e.g. bookworm-backports for Debian 12) that Debian maintainers populate with newer releases of software originally built for Debian Testing or Unstable. Stable’s main archive often has older releases (e.g. KiCad 6 in Debian 12). Backports let you get KiCad 9 (or other up-to-date software) without waiting for the next Debian release. <a href="https://www.kicad.org/download/linux/">Refer</a></p>
-<p>To use backports, we need to enable the backports repo,
-<div class="highlight"><pre><span></span><code>echo &quot;deb http://deb.debian.org/debian bookworm-backports main contrib non-free&quot; \
-  | sudo tee /etc/apt/sources.list.d/bookworm-backports.list
-</code></pre></div>
-Then update apt using
-<div class="highlight"><pre><span></span><code>sudo apt update
-</code></pre></div>
-Now install KiCAD using,
-<div class="highlight"><pre><span></span><code>sudo apt install -t bookworm-backports kicad
-</code></pre></div>
-The -t flag in APT stands for “target release” (it’s shorthand for --target-release). It tells APT which release (or suite) you want to pull a package from, rather than using the default “stable” archive.</p>
-<h2 id="3-zotero-citation-management-software">3. Zotero - citation management software</h2>
-<p>The Git repo is <a href="https://github.com/retorquere/zotero-deb">here</a> for deb. It is reccognized officially by <a href="https://www.zotero.org/support/installation">zotero</a>.</p>
-<p>Install the zotero connector extension in the browser, so that the papers can be directly added to zotero</p>
-<p>create an account and setup in zotero for cloud sync</p>
-<p>A list of <a href="https://www.zotero.org/support/plugins">plugins</a> can be found here.</p>
-<p>For network visualization, use <a href="https://github.com/diegodlh/zotero-cita">cita</a>. Unfortunaltely it does not support Zotero 7</p>
-<p>You can choose upto 9 colors for tags. Use this.</p>
 
 
 

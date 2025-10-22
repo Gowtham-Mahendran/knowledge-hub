@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../Customization/Tweaks/">
+        <link rel="prev" href="../Docker/">
       
       
-        <link rel="next" href="../User-specific-softwares/">
+        <link rel="next" href="../Matlab/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Common - gowt.dev</title>
+        <title>Mini-forge - gowt.dev</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#common-softwares" class="md-skip">
+        <a href="#miniforge" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Common
+              Mini-forge
             
           </span>
         </div>
@@ -509,12 +509,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Setup/Network-drives/" class="md-nav__link">
+      <a href="../../Setup/Common-problems/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Network Drives
+    Common Problems
     
   </span>
   
@@ -675,6 +675,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -687,67 +710,17 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Common
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Common
+    Mini-forge
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-spotify" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Spotify
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -761,12 +734,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../User-specific-softwares/" class="md-nav__link">
+      <a href="../Matlab/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    User Specific
+    Matlab
     
   </span>
   
@@ -784,12 +757,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../Coding/" class="md-nav__link">
+      <a href="../Codium/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Coding
+    Codium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zotero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kicad
     
   </span>
   
@@ -974,10 +993,105 @@
 
 
 
-<h1 id="common-softwares">Common Softwares</h1>
-<h2 id="1-spotify">1. Spotify</h2>
-<p><a href="https://www.spotify.com/us/download/linux/">Refer </a></p>
-<h2 id="2">2.</h2>
+<h1 id="miniforge">Miniforge</h1>
+<ul>
+<li>
+<p>Download conda-forge installer from the <a href="https://conda-forge.org/download/">website</a></p>
+</li>
+<li>
+<p>Go to the directory and run</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>Miniforge3-<span class="k">$(</span>uname<span class="k">)</span>-<span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>.sh
+</code></pre></div>
+<p>Since <code>uname</code> outputs <code>Linux</code> and <code>uname -m</code> outputs <code>x86_64</code>, running the command <code>Miniforge3-$(uname)-$(uname -m).sh</code> is similar to mentioning the actual file name <code>Miniforge3-Linux-x86_64.sh</code>.</p>
+<ul>
+<li>It will ask to read the license agreement and now it will show <code>end</code>. Now type <code>yes</code> and the installation will begin.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Miniforge3<span class="w"> </span>will<span class="w"> </span>now<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>into<span class="w"> </span>this<span class="w"> </span>location:
+/home/gowtham/miniforge3
+
+-<span class="w"> </span>Press<span class="w"> </span>ENTER<span class="w"> </span>to<span class="w"> </span>confirm<span class="w"> </span>the<span class="w"> </span>location
+-<span class="w"> </span>Press<span class="w"> </span>CTRL-C<span class="w"> </span>to<span class="w"> </span>abort<span class="w"> </span>the<span class="w"> </span>installation
+-<span class="w"> </span>Or<span class="w"> </span>specify<span class="w"> </span>a<span class="w"> </span>different<span class="w"> </span>location<span class="w"> </span>below
+</code></pre></div>
+<p>Press <code>ENTER</code></p>
+<ul>
+<li>Once installation is done, it prompts</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Do<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>your<span class="w"> </span>shell<span class="w"> </span>profile<span class="w"> </span>to<span class="w"> </span>automatically<span class="w"> </span>initialize<span class="w"> </span>conda?
+This<span class="w"> </span>will<span class="w"> </span>activate<span class="w"> </span>conda<span class="w"> </span>on<span class="w"> </span>startup<span class="w"> </span>and<span class="w"> </span>change<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>prompt<span class="w"> </span>when<span class="w"> </span>activated.
+If<span class="w"> </span>you<span class="s1">&#39;d prefer that conda&#39;</span>s<span class="w"> </span>base<span class="w"> </span>environment<span class="w"> </span>not<span class="w"> </span>be<span class="w"> </span>activated<span class="w"> </span>on<span class="w"> </span>startup,
+run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>when<span class="w"> </span>conda<span class="w"> </span>is<span class="w"> </span>activated:
+
+conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
+
+You<span class="w"> </span>can<span class="w"> </span>undo<span class="w"> </span>this<span class="w"> </span>by<span class="w"> </span>running<span class="w"> </span><span class="sb">`</span>conda<span class="w"> </span>init<span class="w"> </span>--reverse<span class="w"> </span><span class="nv">$SHELL</span><span class="sb">`</span>?<span class="w"> </span><span class="o">[</span>yes<span class="p">|</span>no<span class="o">]</span>
+</code></pre></div>
+<p>If <code>yes</code> - Adds Conda to your shell startup file. conda is ready every time. 
+If <code>no</code> - You’ll have to manually source <code>~/miniforge3/bin/activate</code> each time.</p>
+<p>press <code>yes</code> in this case. </p>
+<ul>
+<li>Successfully installed</li>
+</ul>
+<div class="highlight"><pre><span></span><code>no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/condabin/conda
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/conda
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/conda-env
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/activate
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/deactivate
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/etc/profile.d/conda.sh
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/etc/fish/conf.d/conda.fish
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/shell/condabin/Conda.psm1
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/shell/condabin/conda-hook.ps1
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/lib/python3.12/site-packages/xontrib/conda.xsh
+no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/etc/profile.d/conda.csh
+modified<span class="w">      </span>/home/gowtham/.bashrc
+
+<span class="o">==</span>&gt;<span class="w"> </span>For<span class="w"> </span>changes<span class="w"> </span>to<span class="w"> </span>take<span class="w"> </span>effect,<span class="w"> </span>close<span class="w"> </span>and<span class="w"> </span>re-open<span class="w"> </span>your<span class="w"> </span>current<span class="w"> </span>shell.<span class="w"> </span>&lt;<span class="o">==</span>
+
+Running<span class="w"> </span><span class="sb">`</span>shell<span class="w"> </span>init<span class="sb">`</span>,<span class="w"> </span>which:
+<span class="w"> </span>-<span class="w"> </span>modifies<span class="w"> </span>RC<span class="w"> </span>file:<span class="w"> </span><span class="s2">&quot;/home/gowtham/.bashrc&quot;</span>
+<span class="w"> </span>-<span class="w"> </span>generates<span class="w"> </span>config<span class="w"> </span><span class="k">for</span><span class="w"> </span>root<span class="w"> </span>prefix:<span class="w"> </span><span class="s2">&quot;/home/gowtham/miniforge3&quot;</span>
+<span class="w"> </span>-<span class="w"> </span>sets<span class="w"> </span>mamba<span class="w"> </span>executable<span class="w"> </span>to:<span class="w"> </span><span class="s2">&quot;/home/gowtham/miniforge3/bin/mamba&quot;</span>
+The<span class="w"> </span>following<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>added<span class="w"> </span><span class="k">in</span><span class="w"> </span>your<span class="w"> </span><span class="s2">&quot;/home/gowtham/.bashrc&quot;</span><span class="w"> </span>file
+
+<span class="c1"># &gt;&gt;&gt; mamba initialize &gt;&gt;&gt;</span>
+<span class="c1"># !! Contents within this block are managed by &#39;mamba shell init&#39; !!</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">MAMBA_EXE</span><span class="o">=</span><span class="s1">&#39;/home/gowtham/miniforge3/bin/mamba&#39;</span><span class="p">;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">MAMBA_ROOT_PREFIX</span><span class="o">=</span><span class="s1">&#39;/home/gowtham/miniforge3&#39;</span><span class="p">;</span>
+<span class="nv">__mamba_setup</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="s2">&quot;</span><span class="nv">$MAMBA_EXE</span><span class="s2">&quot;</span><span class="w"> </span>shell<span class="w"> </span>hook<span class="w"> </span>--shell<span class="w"> </span>bash<span class="w"> </span>--root-prefix<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MAMBA_ROOT_PREFIX</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="k">)</span><span class="s2">&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$__mamba_setup</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">alias</span><span class="w"> </span><span class="nv">mamba</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MAMBA_EXE</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Fallback on help from mamba activate</span>
+<span class="k">fi</span>
+<span class="nb">unset</span><span class="w"> </span>__mamba_setup
+<span class="c1"># &lt;&lt;&lt; mamba initialize &lt;&lt;&lt;</span>
+
+Thank<span class="w"> </span>you<span class="w"> </span><span class="k">for</span><span class="w"> </span>installing<span class="w"> </span>Miniforge3!
+</code></pre></div>
+<ul>
+<li>Close terminal window (Konsole) and open a new one. <em>conda env base</em> can be seen.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>--version
+conda<span class="w"> </span><span class="m">25</span>.3.0
+</code></pre></div>
+<ul>
+<li>To prevent the automatic activation of the conda base environment when you open a new terminal
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
+</code></pre></div></li>
+</ul>
+<p>Once again, reopen the terminal. Conda can still be accessed in Konsole but we need to activate the environment when needed.
+<div class="highlight"><pre><span></span><code>gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>--version
+conda<span class="w"> </span><span class="m">25</span>.3.0
+gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>base
+<span class="o">(</span>base<span class="o">)</span><span class="w"> </span>gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>deactivate
+gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
+
+<span class="c1"># conda environments:</span>
+<span class="c1">#</span>
+base<span class="w">                   </span>/home/gowtham/miniforge3
+</code></pre></div></p>
 
 
 

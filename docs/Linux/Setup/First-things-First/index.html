@@ -12,7 +12,7 @@
         <link rel="prev" href="../Debian-setup/">
       
       
-        <link rel="next" href="../Network-drives/">
+        <link rel="next" href="../Common-problems/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -561,27 +561,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-nvidia-driver" class="md-nav__link">
+  <a href="#4-external-monitor" class="md-nav__link">
     <span class="md-ellipsis">
-      4. NVIDIA Driver
+      4. External Monitor
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-miniforge" class="md-nav__link">
+  <a href="#5-mounting-network-drives" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Miniforge
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-external-monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. External Monitor
+      5. Mounting Network Drives
     </span>
   </a>
   
@@ -603,12 +594,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Network-drives/" class="md-nav__link">
+      <a href="../Common-problems/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Network Drives
+    Common Problems
     
   </span>
   
@@ -770,12 +761,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Software/Common-Softwares/" class="md-nav__link">
+      <a href="../../Software/Docker/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Common
+    Docker
     
   </span>
   
@@ -793,12 +784,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Software/User-specific-softwares/" class="md-nav__link">
+      <a href="../../Software/Mini-forge/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    User Specific
+    Mini-forge
     
   </span>
   
@@ -816,12 +807,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Software/Coding/" class="md-nav__link">
+      <a href="../../Software/Matlab/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Coding
+    Matlab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/Codium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/Zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zotero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software/kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kicad
     
   </span>
   
@@ -1017,191 +1077,16 @@
 <li>Log in using your institutional credentials.</li>
 </ol>
 <h2 id="2-installing-thunderbird">2. Installing Thunderbird</h2>
-<p>Once the sources were fixed, Thunderbird could be installed normally:</p>
+<p>Thunderbird is my favourite mailing manager. Thunderbird could be installed normally form the apt repositary:</p>
 <p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>aptitude<span class="w"> </span>install<span class="w"> </span>thunderbird<span class="w"> </span>
 </code></pre></div>
-This downloaded the package from online mirrors instead of prompting for the DVD.</p>
+This downloads the package from online mirrors. Customizing thunderbird is detailed in Customization section.</p>
 <h2 id="3-brave-browser">3. Brave Browser</h2>
 <p>Here is the linux <a href="https://brave.com/linux/">download</a> page of Brave browser</p>
 <div class="highlight"><pre><span></span><code>aptitude install curl
 curl -fsS https://dl.brave.com/install.sh | sh
 </code></pre></div>
-<h2 id="4-nvidia-driver">4. NVIDIA Driver</h2>
-<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="w"> </span><span class="m">0</span>.259410<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>BIOS<span class="w"> </span>Error<span class="w"> </span><span class="o">(</span>bug<span class="o">)</span>:<span class="w"> </span>Failure<span class="w"> </span>creating<span class="w"> </span>named<span class="w"> </span>object<span class="w"> </span><span class="o">[</span>_SB.PCI0.GPP0.VGA<span class="o">]</span>,<span class="w"> </span>AE_ALREADY_EXISTS<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/dswload2-326<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.259421<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>Error:<span class="w"> </span>AE_ALREADY_EXISTS,<span class="w"> </span>During<span class="w"> </span>name<span class="w"> </span>lookup/catalog<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/psobject-220<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.259492<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>BIOS<span class="w"> </span>Error<span class="w"> </span><span class="o">(</span>bug<span class="o">)</span>:<span class="w"> </span>Failure<span class="w"> </span>creating<span class="w"> </span>named<span class="w"> </span>object<span class="w"> </span><span class="o">[</span>_SB.PCI0.GPP0.HDAU<span class="o">]</span>,<span class="w"> </span>AE_ALREADY_EXISTS<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/dswload2-326<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.259436<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>Error:<span class="w"> </span>AE_ALREADY_EXISTS,<span class="w"> </span>During<span class="w"> </span>name<span class="w"> </span>lookup/catalog<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/psobject-220<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909192<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909414<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909528<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909560<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909787<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">1</span>.998245<span class="o">]</span><span class="w"> </span>nouveau<span class="w"> </span><span class="m">0000</span>:01:00.0:<span class="w"> </span>firmware:<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>load<span class="w"> </span>nvidia/ga107/nvdec/scrubber.bin<span class="w"> </span><span class="o">(</span>-2<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">1</span>.998271<span class="o">]</span><span class="w"> </span>firmware_class:<span class="w"> </span>See<span class="w"> </span>https://wiki.debian.org/Firmware<span class="w"> </span><span class="k">for</span><span class="w"> </span>information<span class="w"> </span>about<span class="w"> </span>missing<span class="w"> </span>firmware
-<span class="o">[</span><span class="w"> </span><span class="m">1</span>.998307<span class="o">]</span><span class="w"> </span>nouveau<span class="w"> </span><span class="m">0000</span>:01:00.0:<span class="w"> </span>firmware:<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>load<span class="w"> </span>nvidia/ga107/nvdec/scrubber.bin<span class="w"> </span><span class="o">(</span>-2<span class="o">)</span>
-</code></pre></div>
-<p>The last three errors shows that the nvidia driver is failed to load. The nvidia-detect script (found in the <a href="https://packages.debian.org/nvidia-detect">nvidia-detect</a> package in the <a href="https://www.debian.org/doc/debian-policy/ch-archive#s-non-free">non-free</a> section) can also be used to identify the GPU and the recommended driver package to install. Refer the nvidia debian page <a href="https://wiki.debian.org/NvidiaGraphicsDrivers">here</a></p>
-<p>Install the detect driver
-<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>nvidia-detect
-</code></pre></div></p>
-<p>Detect the driver using<br />
-<div class="highlight"><pre><span></span><code>nvidia-detect
-</code></pre></div></p>
-<p>The output is as follows</p>
-<div class="highlight"><pre><span></span><code>gowtham@deb-gowarc:~$<span class="w"> </span>nvidia-detect
-Detected<span class="w"> </span>NVIDIA<span class="w"> </span>GPUs:
-<span class="m">01</span>:00.0<span class="w"> </span>VGA<span class="w"> </span>compatible<span class="w"> </span>controller<span class="w"> </span><span class="o">[</span><span class="m">0300</span><span class="o">]</span>:<span class="w"> </span>NVIDIA<span class="w"> </span>Corporation<span class="w"> </span>GA107M<span class="w"> </span><span class="o">[</span>GeForce<span class="w"> </span>RTX<span class="w"> </span><span class="m">3050</span><span class="w"> </span>Mobile<span class="o">]</span><span class="w"> </span><span class="o">[</span>10de:25a2<span class="o">]</span><span class="w"> </span><span class="o">(</span>rev<span class="w"> </span>a1<span class="o">)</span>
-
-Checking<span class="w"> </span>card:<span class="w">  </span>NVIDIA<span class="w"> </span>Corporation<span class="w"> </span>GA107M<span class="w"> </span><span class="o">[</span>GeForce<span class="w"> </span>RTX<span class="w"> </span><span class="m">3050</span><span class="w"> </span>Mobile<span class="o">]</span><span class="w"> </span><span class="o">(</span>rev<span class="w"> </span>a1<span class="o">)</span>
-Your<span class="w"> </span>card<span class="w"> </span>is<span class="w"> </span>supported<span class="w"> </span>by<span class="w"> </span>all<span class="w"> </span>driver<span class="w"> </span>versions.
-Your<span class="w"> </span>card<span class="w"> </span>is<span class="w"> </span>also<span class="w"> </span>supported<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>Tesla<span class="w"> </span><span class="m">470</span><span class="w"> </span>drivers<span class="w"> </span>series.
-It<span class="w"> </span>is<span class="w"> </span>recommended<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>the
-nvidia-driver
-package.
-</code></pre></div>
-<p>Install the nvidia-driver
-<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>nvidia-driver
-</code></pre></div></p>
-<p>During installation, it prompted saying NVIDIA proprietary driver is conflicting with the open-source Nouveau driver. It asked for reboot after installation. Once installed, Reboot in <code>su</code>
-<div class="highlight"><pre><span></span><code>reboot
-</code></pre></div></p>
-<p>verify the installation using 
-<div class="highlight"><pre><span></span><code>nvidia-smi
-</code></pre></div></p>
-<p>The output is as follows</p>
-<div class="highlight"><pre><span></span><code>gowtham@deb-gowarc:~$<span class="w"> </span>nvidia-smi
-Thu<span class="w"> </span>Jun<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">17</span>:13:29<span class="w"> </span><span class="m">2025</span><span class="w">       </span>
-+---------------------------------------------------------------------------------------+
-<span class="p">|</span><span class="w"> </span>NVIDIA-SMI<span class="w"> </span><span class="m">535</span>.247.01<span class="w">             </span>Driver<span class="w"> </span>Version:<span class="w"> </span><span class="m">535</span>.247.01<span class="w">   </span>CUDA<span class="w"> </span>Version:<span class="w"> </span><span class="m">12</span>.2<span class="w">     </span><span class="p">|</span>
-<span class="p">|</span>-----------------------------------------+----------------------+----------------------+
-<span class="p">|</span><span class="w"> </span>GPU<span class="w">  </span>Name<span class="w">                 </span>Persistence-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>Bus-Id<span class="w">        </span>Disp.A<span class="w"> </span><span class="p">|</span><span class="w"> </span>Volatile<span class="w"> </span>Uncorr.<span class="w"> </span>ECC<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="w"> </span>Fan<span class="w">  </span>Temp<span class="w">   </span>Perf<span class="w">          </span>Pwr:Usage/Cap<span class="w"> </span><span class="p">|</span><span class="w">         </span>Memory-Usage<span class="w"> </span><span class="p">|</span><span class="w"> </span>GPU-Util<span class="w">  </span>Compute<span class="w"> </span>M.<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="w">                                         </span><span class="p">|</span><span class="w">                      </span><span class="p">|</span><span class="w">               </span>MIG<span class="w"> </span>M.<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="o">=========================================</span>+<span class="o">======================</span>+<span class="o">======================</span><span class="p">|</span>
-<span class="p">|</span><span class="w">   </span><span class="m">0</span><span class="w">  </span>NVIDIA<span class="w"> </span>GeForce<span class="w"> </span>RTX<span class="w"> </span><span class="m">3050</span><span class="w"> </span>...<span class="w">    </span>On<span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="m">00000000</span>:01:00.0<span class="w"> </span>Off<span class="w"> </span><span class="p">|</span><span class="w">                  </span>N/A<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="w"> </span>N/A<span class="w">   </span>47C<span class="w">    </span>P3<span class="w">              </span>17W<span class="w"> </span>/<span class="w">  </span>30W<span class="w"> </span><span class="p">|</span><span class="w">      </span>8MiB<span class="w"> </span>/<span class="w">  </span>4096MiB<span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">0</span>%<span class="w">      </span>Default<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="w">                                         </span><span class="p">|</span><span class="w">                      </span><span class="p">|</span><span class="w">                  </span>N/A<span class="w"> </span><span class="p">|</span>
-+-----------------------------------------+----------------------+----------------------+
-
-+---------------------------------------------------------------------------------------+
-<span class="p">|</span><span class="w"> </span>Processes:<span class="w">                                                                            </span><span class="p">|</span>
-<span class="p">|</span><span class="w">  </span>GPU<span class="w">   </span>GI<span class="w">   </span>CI<span class="w">        </span>PID<span class="w">   </span>Type<span class="w">   </span>Process<span class="w"> </span>name<span class="w">                            </span>GPU<span class="w"> </span>Memory<span class="w"> </span><span class="p">|</span>
-<span class="p">|</span><span class="w">        </span>ID<span class="w">   </span>ID<span class="w">                                                             </span>Usage<span class="w">      </span><span class="p">|</span>
-<span class="p">|</span><span class="o">=======================================================================================</span><span class="p">|</span>
-<span class="p">|</span><span class="w">    </span><span class="m">0</span><span class="w">   </span>N/A<span class="w">  </span>N/A<span class="w">       </span><span class="m">949</span><span class="w">      </span>G<span class="w">   </span>/usr/lib/xorg/Xorg<span class="w">                            </span>4MiB<span class="w"> </span><span class="p">|</span>
-+---------------------------------------------------------------------------------------+
-</code></pre></div>
-<p>while rebooting, the nvidia driver error got resolved.</p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="w"> </span><span class="m">0</span>.259410<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>BIOS<span class="w"> </span>Error<span class="w"> </span><span class="o">(</span>bug<span class="o">)</span>:<span class="w"> </span>Failure<span class="w"> </span>creating<span class="w"> </span>named<span class="w"> </span>object<span class="w"> </span><span class="o">[</span>_SB.PCI0.GPP0.VGA<span class="o">]</span>,<span class="w"> </span>AE_ALREADY_EXISTS<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/dswload2-326<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.259421<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>Error:<span class="w"> </span>AE_ALREADY_EXISTS,<span class="w"> </span>During<span class="w"> </span>name<span class="w"> </span>lookup/catalog<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/psobject-220<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.259492<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>BIOS<span class="w"> </span>Error<span class="w"> </span><span class="o">(</span>bug<span class="o">)</span>:<span class="w"> </span>Failure<span class="w"> </span>creating<span class="w"> </span>named<span class="w"> </span>object<span class="w"> </span><span class="o">[</span>_SB.PCI0.GPP0.HDAU<span class="o">]</span>,<span class="w"> </span>AE_ALREADY_EXISTS<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/dswload2-326<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.259436<span class="o">]</span><span class="w"> </span>ACPI<span class="w"> </span>Error:<span class="w"> </span>AE_ALREADY_EXISTS,<span class="w"> </span>During<span class="w"> </span>name<span class="w"> </span>lookup/catalog<span class="w"> </span><span class="o">(</span><span class="m">20220331</span>/psobject-220<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909192<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909414<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909528<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909560<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-<span class="o">[</span><span class="w"> </span><span class="m">0</span>.909787<span class="o">]</span><span class="w"> </span>blacklist:<span class="w"> </span>Problem<span class="w"> </span>blacklisting<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="o">(</span>-13<span class="o">)</span>
-</code></pre></div>
-<h2 id="5-miniforge">5. Miniforge</h2>
-<ul>
-<li>
-<p>Download conda-forge installer from the <a href="https://conda-forge.org/download/">website</a></p>
-</li>
-<li>
-<p>Go to the directory and run</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>Miniforge3-<span class="k">$(</span>uname<span class="k">)</span>-<span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>.sh
-</code></pre></div>
-<p>Since <code>uname</code> outputs <code>Linux</code> and <code>uname -m</code> outputs <code>x86_64</code>, running the command <code>Miniforge3-$(uname)-$(uname -m).sh</code> is similar to mentioning the actual file name <code>Miniforge3-Linux-x86_64.sh</code>.</p>
-<ul>
-<li>It will ask to read the license agreement and now it will show <code>end</code>. Now type <code>yes</code> and the installation will begin.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>Miniforge3<span class="w"> </span>will<span class="w"> </span>now<span class="w"> </span>be<span class="w"> </span>installed<span class="w"> </span>into<span class="w"> </span>this<span class="w"> </span>location:
-/home/gowtham/miniforge3
-
--<span class="w"> </span>Press<span class="w"> </span>ENTER<span class="w"> </span>to<span class="w"> </span>confirm<span class="w"> </span>the<span class="w"> </span>location
--<span class="w"> </span>Press<span class="w"> </span>CTRL-C<span class="w"> </span>to<span class="w"> </span>abort<span class="w"> </span>the<span class="w"> </span>installation
--<span class="w"> </span>Or<span class="w"> </span>specify<span class="w"> </span>a<span class="w"> </span>different<span class="w"> </span>location<span class="w"> </span>below
-</code></pre></div>
-<p>Press <code>ENTER</code></p>
-<ul>
-<li>Once installation is done, it prompts</li>
-</ul>
-<div class="highlight"><pre><span></span><code>Do<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>your<span class="w"> </span>shell<span class="w"> </span>profile<span class="w"> </span>to<span class="w"> </span>automatically<span class="w"> </span>initialize<span class="w"> </span>conda?
-This<span class="w"> </span>will<span class="w"> </span>activate<span class="w"> </span>conda<span class="w"> </span>on<span class="w"> </span>startup<span class="w"> </span>and<span class="w"> </span>change<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>prompt<span class="w"> </span>when<span class="w"> </span>activated.
-If<span class="w"> </span>you<span class="s1">&#39;d prefer that conda&#39;</span>s<span class="w"> </span>base<span class="w"> </span>environment<span class="w"> </span>not<span class="w"> </span>be<span class="w"> </span>activated<span class="w"> </span>on<span class="w"> </span>startup,
-run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>when<span class="w"> </span>conda<span class="w"> </span>is<span class="w"> </span>activated:
-
-conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
-
-You<span class="w"> </span>can<span class="w"> </span>undo<span class="w"> </span>this<span class="w"> </span>by<span class="w"> </span>running<span class="w"> </span><span class="sb">`</span>conda<span class="w"> </span>init<span class="w"> </span>--reverse<span class="w"> </span><span class="nv">$SHELL</span><span class="sb">`</span>?<span class="w"> </span><span class="o">[</span>yes<span class="p">|</span>no<span class="o">]</span>
-</code></pre></div>
-<p>If <code>yes</code> - Adds Conda to your shell startup file. conda is ready every time. 
-If <code>no</code> - You’ll have to manually source <code>~/miniforge3/bin/activate</code> each time.</p>
-<p>press <code>yes</code> in this case. </p>
-<ul>
-<li>Successfully installed</li>
-</ul>
-<div class="highlight"><pre><span></span><code>no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/condabin/conda
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/conda
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/conda-env
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/activate
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/bin/deactivate
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/etc/profile.d/conda.sh
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/etc/fish/conf.d/conda.fish
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/shell/condabin/Conda.psm1
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/shell/condabin/conda-hook.ps1
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/lib/python3.12/site-packages/xontrib/conda.xsh
-no<span class="w"> </span>change<span class="w">     </span>/home/gowtham/miniforge3/etc/profile.d/conda.csh
-modified<span class="w">      </span>/home/gowtham/.bashrc
-
-<span class="o">==</span>&gt;<span class="w"> </span>For<span class="w"> </span>changes<span class="w"> </span>to<span class="w"> </span>take<span class="w"> </span>effect,<span class="w"> </span>close<span class="w"> </span>and<span class="w"> </span>re-open<span class="w"> </span>your<span class="w"> </span>current<span class="w"> </span>shell.<span class="w"> </span>&lt;<span class="o">==</span>
-
-Running<span class="w"> </span><span class="sb">`</span>shell<span class="w"> </span>init<span class="sb">`</span>,<span class="w"> </span>which:
-<span class="w"> </span>-<span class="w"> </span>modifies<span class="w"> </span>RC<span class="w"> </span>file:<span class="w"> </span><span class="s2">&quot;/home/gowtham/.bashrc&quot;</span>
-<span class="w"> </span>-<span class="w"> </span>generates<span class="w"> </span>config<span class="w"> </span><span class="k">for</span><span class="w"> </span>root<span class="w"> </span>prefix:<span class="w"> </span><span class="s2">&quot;/home/gowtham/miniforge3&quot;</span>
-<span class="w"> </span>-<span class="w"> </span>sets<span class="w"> </span>mamba<span class="w"> </span>executable<span class="w"> </span>to:<span class="w"> </span><span class="s2">&quot;/home/gowtham/miniforge3/bin/mamba&quot;</span>
-The<span class="w"> </span>following<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>added<span class="w"> </span><span class="k">in</span><span class="w"> </span>your<span class="w"> </span><span class="s2">&quot;/home/gowtham/.bashrc&quot;</span><span class="w"> </span>file
-
-<span class="c1"># &gt;&gt;&gt; mamba initialize &gt;&gt;&gt;</span>
-<span class="c1"># !! Contents within this block are managed by &#39;mamba shell init&#39; !!</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">MAMBA_EXE</span><span class="o">=</span><span class="s1">&#39;/home/gowtham/miniforge3/bin/mamba&#39;</span><span class="p">;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">MAMBA_ROOT_PREFIX</span><span class="o">=</span><span class="s1">&#39;/home/gowtham/miniforge3&#39;</span><span class="p">;</span>
-<span class="nv">__mamba_setup</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="s2">&quot;</span><span class="nv">$MAMBA_EXE</span><span class="s2">&quot;</span><span class="w"> </span>shell<span class="w"> </span>hook<span class="w"> </span>--shell<span class="w"> </span>bash<span class="w"> </span>--root-prefix<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MAMBA_ROOT_PREFIX</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="k">)</span><span class="s2">&quot;</span>
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$__mamba_setup</span><span class="s2">&quot;</span>
-<span class="k">else</span>
-<span class="w">    </span><span class="nb">alias</span><span class="w"> </span><span class="nv">mamba</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MAMBA_EXE</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># Fallback on help from mamba activate</span>
-<span class="k">fi</span>
-<span class="nb">unset</span><span class="w"> </span>__mamba_setup
-<span class="c1"># &lt;&lt;&lt; mamba initialize &lt;&lt;&lt;</span>
-
-Thank<span class="w"> </span>you<span class="w"> </span><span class="k">for</span><span class="w"> </span>installing<span class="w"> </span>Miniforge3!
-</code></pre></div>
-<ul>
-<li>Close terminal window (Konsole) and open a new one. <em>conda env base</em> can be seen.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>--version
-conda<span class="w"> </span><span class="m">25</span>.3.0
-</code></pre></div>
-<ul>
-<li>To prevent the automatic activation of the conda base environment when you open a new terminal
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
-</code></pre></div></li>
-</ul>
-<p>Once again, reopen the terminal. Conda can still be accessed in Konsole but we need to activate the environment when needed.
-<div class="highlight"><pre><span></span><code>gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>--version
-conda<span class="w"> </span><span class="m">25</span>.3.0
-gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>base
-<span class="o">(</span>base<span class="o">)</span><span class="w"> </span>gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>deactivate
-gowtham@deb-gowarc:~$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
-
-<span class="c1"># conda environments:</span>
-<span class="c1">#</span>
-base<span class="w">                   </span>/home/gowtham/miniforge3
-</code></pre></div></p>
-<h2 id="6-external-monitor">6. External Monitor</h2>
+<h2 id="4-external-monitor">4. External Monitor</h2>
 <p>You can preview the current setup by just running:
 <div class="highlight"><pre><span></span><code>xrandr
 </code></pre></div></p>
@@ -1214,6 +1099,44 @@ base<span class="w">                   </span>/home/gowtham/miniforge3
 <p>To duplicate,
 <div class="highlight"><pre><span></span><code>xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-1-0<span class="w"> </span>--mode<span class="w"> </span>1920x1080<span class="w"> </span>--same-as<span class="w"> </span>eDP
 </code></pre></div></p>
+<h2 id="5-mounting-network-drives">5. Mounting Network Drives</h2>
+<ol>
+<li>Make a new folder in the user directory</li>
+</ol>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>name
+</code></pre></div>
+<ol>
+<li>Check the uid and gid of the user using</li>
+</ol>
+<div class="highlight"><pre><span></span><code>id
+</code></pre></div>
+<ol>
+<li>To mount CIFS file systems under Linux, you may need to install additional packages. Install cifs-utils using,</li>
+</ol>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>cifs-utils
+</code></pre></div>
+<ol>
+<li>Edit the fstab file to mount permanently and let it be there automatically on boot. To open, we need to be in the root.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/fstab<span class="w">   </span>
+</code></pre></div>
+<ol>
+<li>You can add entries to /etc/fstab (you must be root for that or use sudo). The entries should have the form: <a href="https://hpcwiki.uni-oldenburg.de/en/hpc-usage/data-storage/mounting-file-systems">Refer</a></li>
+</ol>
+<div class="highlight"><pre><span></span><code>//server_address/share<span class="w"> </span>&lt;mount_point&gt;<span class="w"> </span>cifs<span class="w"> </span><span class="nv">vers</span><span class="o">=</span><span class="m">3</span>.0,workgroup<span class="o">=</span>W2KROOT,username<span class="o">=</span>&lt;user&gt;,file_mode<span class="o">=</span><span class="m">0600</span>,dir_mode<span class="o">=</span><span class="m">0700</span>,uid<span class="o">=</span>&lt;linux_username&gt;,gid<span class="o">=</span>&lt;linux_group&gt;,noauto,users<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+<ol>
+<li>Then, to mount the directories, you can use the following command as a user without root-privileges:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mount<span class="w"> </span>&lt;mount_point&gt;
+</code></pre></div>
+<p>There will be a warning message,</p>
+<div class="highlight"><pre><span></span><code>mount:<span class="w"> </span><span class="o">(</span>hint<span class="o">)</span><span class="w"> </span>your<span class="w"> </span>fstab<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>modified,<span class="w"> </span>but<span class="w"> </span>systemd<span class="w"> </span>still<span class="w"> </span>uses
+<span class="w">      </span>the<span class="w"> </span>old<span class="w"> </span>version<span class="p">;</span><span class="w"> </span>use<span class="w"> </span><span class="s1">&#39;systemctl daemon-reload&#39;</span><span class="w"> </span>to<span class="w"> </span>reload.
+</code></pre></div>
+<p>It means, if you've recently edited <code>/etc/fstab</code>, <code>systemd</code> is still using a cached version, and to fully apply the new changes, you should run:</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>daemon-reload
+</code></pre></div>
 
 
 

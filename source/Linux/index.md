@@ -22,7 +22,7 @@ hide:
     <h3 style="margin:0 0 0.5rem 0; font-size:1rem;font-weight:bold;">Setup</h3>
     <ul style="padding-left:1.2rem; margin:0; font-size:0.7rem; line-height:1;">
       <li><a href="Setup/Debian-setup/">Debian Trixie Setup</a></li>
-      <li><a href="Setup/Network-drives/">Network Drives</a></li>
+      <li><a href="Setup/Common-problems/">Common Problems</a></li>
       <li><a href="Setup/First-things-First/">First Things First</a></li>
     </ul>
   </div>
@@ -40,9 +40,12 @@ hide:
   <div style="border:1px solid; border-radius:8px; padding:1rem;">
     <h3 style="margin:0 0 0.5rem 0; font-size:1rem;font-weight:bold;">Software</h3>
     <ul style="padding-left:1.2rem; margin:0; font-size:0.7rem; line-height:1;">
-      <li><a href="Software/Common-Softwares/">Common Software</a></li>
-      <li><a href="Software/User-specific-softwares/">User-Specific Tools</a></li>
-      <li><a href="Software/Coding/">Coding</a></li>
+      <li><a href="Software/Docker/">Docker</a></li>
+      <li><a href="Software/Mini-forge/">Mini-forge</a></li>
+      <li><a href="Software/Matlab/">Matlab</a></li>
+      <li><a href="Software/Codium/">Codium</a></li>
+      <li><a href="Software/Zotero/">Zotero</a></li>
+      <li><a href="Software/kicad/">Kicad</a></li>
     </ul>
   </div>
 
