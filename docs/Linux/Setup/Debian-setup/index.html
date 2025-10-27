@@ -526,6 +526,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Setting Up Debian Package Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aptitude" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aptitude
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1121,14 +1154,24 @@ deb<span class="w"> </span>http://deb.debian.org/debian<span class="w"> </span>t
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
 </code></pre></div></p>
 <p><strong>To install softwares and tools, i personally prefer having a package manager,</strong></p>
+<h3 id="aptitude">Aptitude</h3>
 <p>Aptitude provides a user-friendly interface with more advanced features compared to the simple command-line interface of <code>apt-get</code></p>
 <p>Install <code>aptitude</code> package manager</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>aptitude
 </code></pre></div>
 <p>In the Aptitude interface, press <code>/</code> to search package. Navigate using the arrow keys. To install packages, use the <code>+</code> key to select the packages and press <code>g</code> to start the installation process.</p>
+<h3 id="curl">Curl</h3>
 <p>Sometimes, <code>curl</code> is needed to install packages. You can install it using the <code>aptitude</code></p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>aptitude<span class="w"> </span>install<span class="w"> </span>curl
 </code></pre></div>
+<h3 id="flatpak">Flatpak</h3>
+<p><a href="https://flatpak.org/">Flatpak</a> is another package management for Linux.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>flatpak
+</code></pre></div>
+<p>Add the flatpak repo <a href="https://flatpak.org/setup/Debian">refer</a>
+<div class="highlight"><pre><span></span><code>flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://dl.flathub.org/repo/flathub.flatpakrepo
+</code></pre></div></p>
+<p>Restart the system to apply the changes.</p>
 
 
 

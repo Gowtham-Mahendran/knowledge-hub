@@ -35,6 +35,12 @@ ps2pdf input.ps
 
 PDF will be created without a encrypt password.
 
+**qpdf**
+
+```bash
+qpdf --decrypt restricted-input.pdf unrestricted-output.pdf
+```
+
 ## UV - astral
 
 then

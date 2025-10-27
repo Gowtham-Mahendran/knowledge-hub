@@ -116,6 +116,7 @@ sudo apt upgrade
 
 **To install softwares and tools, i personally prefer having a package manager,**
 
+### Aptitude
 
 Aptitude provides a user-friendly interface with more advanced features compared to the simple command-line interface of `apt-get`
 
@@ -127,8 +128,25 @@ sudo apt install aptitude
 
 In the Aptitude interface, press `/` to search package. Navigate using the arrow keys. To install packages, use the `+` key to select the packages and press `g` to start the installation process.
 
+### Curl
+
 Sometimes, `curl` is needed to install packages. You can install it using the `aptitude`
 
 ```bash
 sudo aptitude install curl
 ```
+
+### Flatpak
+
+[Flatpak](https://flatpak.org/) is another package management for Linux.
+
+```bash
+sudo apt install flatpak
+```
+
+Add the flatpak repo [refer](https://flatpak.org/setup/Debian)
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+Restart the system to apply the changes.
