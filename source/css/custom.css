@@ -62,11 +62,11 @@
 } */
 
 /* Style top-level sidebar section titles */
-.md-nav__item--section > .md-nav__link {
+/* .md-nav__item--section > .md-nav__link {
   font-weight: 600;
   font-size: 0.8rem;
   color: #2b2929 !important;
-}
+} */
 
 /* Center Mermaid diagrams globally */
 .md-typeset .mermaid {

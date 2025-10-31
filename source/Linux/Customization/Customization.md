@@ -2,116 +2,123 @@
 
 ## 1. Fastfetch
 
-   1. Download fastfetch from the [Github](https://github.com/fastfetch-cli/fastfetch) repositary
-   2. Install the .deb file
-   3. Go to terminal and run 
-   ```
-   fastfetch
-   ```
-   4. To view specific linux logo, use
-   ```
-   fastfetch --logo debian
-   ```
-   5. To get all information
-   ```
-   fastfetch -c all.jsonc
-   ```
+1. Download fastfetch from the [Github](https://github.com/fastfetch-cli/fastfetch) repositary
 
-   6. There are also modules to get specific information
-   ```
-   fastfetch -s <module> --format json
-   ```
+2. Install the .deb file
 
-   Replace 'module' with below
+3. Go to terminal and run 
 
-   ```
-1)  Battery       : Print battery capacity, status, etc
-2)  Bios          : Print information of 1st-stage bootloader (name, version, release date, etc)
-3)  Bluetooth     : List (connected) bluetooth devices
-4)  BluetoothRadio: List bluetooth radios width supported version and vendor
-5)  Board         : Print motherboard name and other info
-6)  Bootmgr       : Print information of 2nd-stage bootloader (name, firmware, etc)
-7)  Break         : Print a empty line
-8)  Brightness    : Print current brightness level of your monitors
-9)  Btrfs         : Print Linux BTRFS volumes
-10) Camera        : Print available cameras
-11) Chassis       : Print chassis type (desktop, laptop, etc)
-12) Command       : Run custom shell scripts
-13) Colors        : Print some colored blocks
-14) CPU           : Print CPU name, frequency, etc
-15) CPUCache      : Print CPU cache sizes
-16) CPUUsage      : Print CPU usage. Costs some time to collect data
-17) Cursor        : Print cursor style name
-18) Custom        : Print a custom string, with or without key
-19) DateTime      : Print current date and time
-20) DE            : Print desktop environment name
-21) Display       : Print resolutions, refresh rates, etc
-22) Disk          : Print partitions, space usage, file system, etc
-23) DiskIO        : Print physical disk I/O throughput
-24) DNS           : Print configured DNS servers
-25) Editor        : Print information of the default editor ($VISUAL or $EDITOR)
-26) Font          : Print system font names
-27) Gamepad       : List (connected) gamepads
-28) GPU           : Print GPU names, graphic memory size, type, etc
-29) Host          : Print product name of your computer
-30) Icons         : Print icon style name
-31) InitSystem    : Print init system (pid 1) name and version
-32) Kernel        : Print system kernel version
-33) Keyboard      : List (connected) keyboards
-34) LM            : Print login manager (desktop manager) name and version
-35) Loadavg       : Print system load averages
-36) Locale        : Print system locale name
-37) LocalIp       : List local IP addresses (v4 or v6), MAC addresses, etc
-38) Media         : Print playing song name
-39) Memory        : Print system memory usage info
-40) Monitor       : Alias of Display module
-41) Mouse         : List connected mouses
-42) NetIO         : Print network I/O throughput
-43) OpenCL        : Print highest OpenCL version supported by the GPU
-44) OpenGL        : Print highest OpenGL version supported by the GPU
-45) OS            : Print operating system name and version
-46) Packages      : List installed package managers and count of installed packages
-47) PhysicalDisk  : Print physical disk information
-48) PhysicalMemory: Print system physical memory devices
-49) Player        : Print music player name
-50) PowerAdapter  : Print power adapter name and charging watts
-51) Processes     : Print number of running processes
-52) PublicIp      : Print your public IP address, etc
-53) Separator     : Print a separator line
-54) Shell         : Print current shell name and version
-55) Sound         : Print sound devices, volume, etc
-56) Swap          : Print swap (paging file) space usage
-57) Terminal      : Print current terminal name and version
-58) TerminalFont  : Print font name and size used by current terminal
-59) TerminalSize  : Print current terminal size
-60) TerminalTheme : Print current terminal theme (foreground and background colors)
-61) Title         : Print title, which contains your user name, hostname
-62) Theme         : Print current theme of desktop environment
-63) TPM           : Print info of Trusted Platform Module (TPM) Security Device
-64) Uptime        : Print how long system has been running
-65) Users         : Print users currently logged in
-66) Version       : Print Fastfetch version
-67) Vulkan        : Print highest Vulkan version supported by the GPU
-68) Wallpaper     : Print image file path of current wallpaper
-69) Weather       : Print weather information
-70) WM            : Print window manager name and version
-71) Wifi          : Print connected Wi-Fi info (SSID, connection and security protocol)
-72) WMTheme       : Print current theme of window manager
-73) Zpool         : Print ZFS storage pools
-   ```
+```bash
+fastfetch
+```
+
+4. To view specific linux logo, use
+
+```bash
+fastfetch --logo debian
+```
+
+5. To get all information
+```bash
+fastfetch -c all.jsonc
+```
+
+6. There are also modules to get specific information
+```bash
+fastfetch -s <module> --format json
+```
+
+??? info "Replace 'module' with below"
+	```text
+	1)  Battery       : Print battery capacity, status, etc
+	2)  Bios          : Print information of 1st-stage bootloader (name, version, release date, etc)
+	3)  Bluetooth     : List (connected) bluetooth devices
+	4)  BluetoothRadio: List bluetooth radios width supported version and vendor
+	5)  Board         : Print motherboard name and other info
+	6)  Bootmgr       : Print information of 2nd-stage bootloader (name, firmware, etc)
+	7)  Break         : Print a empty line
+	8)  Brightness    : Print current brightness level of your monitors
+	9)  Btrfs         : Print Linux BTRFS volumes
+	10) Camera        : Print available cameras
+	11) Chassis       : Print chassis type (desktop, laptop, etc)
+	12) Command       : Run custom shell scripts
+	13) Colors        : Print some colored blocks
+	14) CPU           : Print CPU name, frequency, etc
+	15) CPUCache      : Print CPU cache sizes
+	16) CPUUsage      : Print CPU usage. Costs some time to collect data
+	17) Cursor        : Print cursor style name
+	18) Custom        : Print a custom string, with or without key
+	19) DateTime      : Print current date and time
+	20) DE            : Print desktop environment name
+	21) Display       : Print resolutions, refresh rates, etc
+	22) Disk          : Print partitions, space usage, file system, etc
+	23) DiskIO        : Print physical disk I/O throughput
+	24) DNS           : Print configured DNS servers
+	25) Editor        : Print information of the default editor ($VISUAL or $EDITOR)
+	26) Font          : Print system font names
+	27) Gamepad       : List (connected) gamepads
+	28) GPU           : Print GPU names, graphic memory size, type, etc
+	29) Host          : Print product name of your computer
+	30) Icons         : Print icon style name
+	31) InitSystem    : Print init system (pid 1) name and version
+	32) Kernel        : Print system kernel version
+	33) Keyboard      : List (connected) keyboards
+	34) LM            : Print login manager (desktop manager) name and version
+	35) Loadavg       : Print system load averages
+	36) Locale        : Print system locale name
+	37) LocalIp       : List local IP addresses (v4 or v6), MAC addresses, etc
+	38) Media         : Print playing song name
+	39) Memory        : Print system memory usage info
+	40) Monitor       : Alias of Display module
+	41) Mouse         : List connected mouses
+	42) NetIO         : Print network I/O throughput
+	43) OpenCL        : Print highest OpenCL version supported by the GPU
+	44) OpenGL        : Print highest OpenGL version supported by the GPU
+	45) OS            : Print operating system name and version
+	46) Packages      : List installed package managers and count of installed packages
+	47) PhysicalDisk  : Print physical disk information
+	48) PhysicalMemory: Print system physical memory devices
+	49) Player        : Print music player name
+	50) PowerAdapter  : Print power adapter name and charging watts
+	51) Processes     : Print number of running processes
+	52) PublicIp      : Print your public IP address, etc
+	53) Separator     : Print a separator line
+	54) Shell         : Print current shell name and version
+	55) Sound         : Print sound devices, volume, etc
+	56) Swap          : Print swap (paging file) space usage
+	57) Terminal      : Print current terminal name and version
+	58) TerminalFont  : Print font name and size used by current terminal
+	59) TerminalSize  : Print current terminal size
+	60) TerminalTheme : Print current terminal theme (foreground and background colors)
+	61) Title         : Print title, which contains your user name, hostname
+	62) Theme         : Print current theme of desktop environment
+	63) TPM           : Print info of Trusted Platform Module (TPM) Security Device
+	64) Uptime        : Print how long system has been running
+	65) Users         : Print users currently logged in
+	66) Version       : Print Fastfetch version
+	67) Vulkan        : Print highest Vulkan version supported by the GPU
+	68) Wallpaper     : Print image file path of current wallpaper
+	69) Weather       : Print weather information
+	70) WM            : Print window manager name and version
+	71) Wifi          : Print connected Wi-Fi info (SSID, connection and security protocol)
+	72) WMTheme       : Print current theme of window manager
+	73) Zpool         : Print ZFS storage pools
+	```
 
 
 To add fastfetch to display when opening a new terminal, add it to the bashrc file.
-   ```
+
+```bash
 nano ~/.bashrc
-   ```
+```
 
 `nano` launches the Nano text editor (a simple terminal-based text editor)
 `~/.bashrc` opens the `.bashrc` file located in your home directory. This file defines how your terminal behaves each time you open it. It runs commands, sets aliases, environment variables, or custom startup banners.
 
 Add `fastfetch` at the end.
-   ```
 
+
+```bash
         _,met$$$$$gg.          gowtham@deb-gowarc
      ,g$$$$$$$$$$$$$$$P.       ------------------
    ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 12 (bookworm) x86_64
@@ -141,8 +148,8 @@ Add `fastfetch` at the end.
                                Locale: en_US.UTF-8
 
 gowtham@deb-gowarc:~$ 
+```
 
-   ```
 
 
 ## 2. Oh My Zsh
@@ -218,3 +225,15 @@ To fix text while composing a mail, change the settings like below
 
 <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/d86b722d-13a1-4376-97ee-1385e041beba" />
 
+
+To extract .xz file,
+```bash
+tar -xvf thunderbird-141.0.tar.xz
+```
+Install extensions to enable exchange calendar
+
+<img width="761" height="181" alt="image" src="https://github.com/user-attachments/assets/2758093f-1d0c-49c2-8ef1-7a6e9e626ed1" />
+
+Go to TbSync account manager and add an exchange account with the credentials.
+
+sync calendar. It should now appear in Thunderbird calendar.

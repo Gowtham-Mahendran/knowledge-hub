@@ -11,7 +11,7 @@ To configure **eduroam** using a script, follow these steps:
 
 ## 2. Installing Thunderbird
 
-Thunderbird is my favourite mailing manager. Thunderbird could be installed normally form the apt repositary:
+Thunderbird is my favourite mail manager. Thunderbird could be installed normally form the apt repositary:
 
 ```bash
 sudo aptitude install thunderbird 
@@ -22,7 +22,7 @@ This downloads the package from online mirrors. Customizing thunderbird is detai
 
 Here is the linux [download](https://brave.com/linux/) page of Brave browser
 
-```
+```bash
 aptitude install curl
 curl -fsS https://dl.brave.com/install.sh | sh
 ```

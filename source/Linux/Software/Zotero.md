@@ -2,7 +2,7 @@
 
 The Git repo is [here](https://github.com/retorquere/zotero-deb) for deb. It is reccognized officially by [zotero](https://www.zotero.org/support/installation).
 
-Install the zotero connector extension in the browser, so that the papers can be directly added to zotero
+Install the `zotero connector` extension in the browser, so that the papers can be directly added to zotero
 
 create an account and setup in zotero for cloud sync
 

@@ -8,108 +8,82 @@ Sphinx [Themes](https://sphinx-themes.org/)
 
 [Sphinx Docs](https://www.sphinx-doc.org/en/master/index.html)
 
-```
+```bash
 uv pip install sphinx
 ```
+
 **Verify installation**
-```
-(.venv) gowtham@debian:~/Documents/Git/Github/operation_linux$ sphinx-build --version
-sphinx-build 8.2.3
+
+```bash
+sphinx-build --version
 ```
 
 **To create documentation layout**
+```bash
+sphinx-quickstart docs
 ```
-(.venv) gowtham@debian:~/Documents/Git/Github/operation_linux$ sphinx-quickstart docs
-Welcome to the Sphinx 8.2.3 quickstart utility.
 
-Please enter values for the following settings (just press Enter to
-accept a default value, if one is given in brackets).
+???+ note "Initial Setup" 
+    ```text
+    Welcome to the Sphinx 8.2.3 quickstart utility.
 
-Selected root path: docs
+    Please enter values for the following settings (just press Enter to
+    accept a default value, if one is given in brackets).
 
-You have two options for placing the build directory for Sphinx output.
-Either, you use a directory "_build" within the root path, or you separate
-"source" and "build" directories within the root path.
-> Separate source and build directories (y/n) [n]: y
+    Selected root path: docs
 
-The project name will occur in several places in the built documentation.
-> Project name: Debian Linux Docs
-> Author name(s): Gowtham Mahendran
-> Project release []: 1.0
+    You have two options for placing the build directory for Sphinx output.
+    Either, you use a directory "_build" within the root path, or you separate
+    "source" and "build" directories within the root path.
+    > Separate source and build directories (y/n) [n]: y
 
-If the documents are to be written in a language other than English,
-you can select a language here by its language code. Sphinx will then
-translate text that it generates into that language.
+    The project name will occur in several places in the built documentation.
+    > Project name: Debian Linux Docs
+    > Author name(s): Gowtham Mahendran
+    > Project release []: 1.0
 
-For a list of supported codes, see
-https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
-> Project language [en]: 
+    If the documents are to be written in a language other than English,
+    you can select a language here by its language code. Sphinx will then
+    translate text that it generates into that language.
 
-Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/source/conf.py.
-Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/source/index.rst.
-Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/Makefile.
-Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/make.bat.
+    For a list of supported codes, see
+    https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
+    > Project language [en]: 
 
-Finished: An initial directory structure has been created.
+    Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/source/conf.py.
+    Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/source/index.rst.
+    Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/Makefile.
+    Creating file /home/gowtham/Documents/Git/Github/operation_linux/docs/make.bat.
 
-You should now populate your master file /home/gowtham/Documents/Git/Github/operation_linux/docs/source/index.rst and create other documentation
-source files. Use the Makefile to build the docs, like so:
-   make builder
-where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
-```
+    Finished: An initial directory structure has been created.
+
+    You should now populate your master file /home/gowtham/Documents/Git/Github/operation_linux/docs/source/index.rst and create other documentation
+    source files. Use the Makefile to build the docs, like so:
+        make builder
+    where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
+    ```
 
 **Docs folder should be there**
-```
-(.venv) gowtham@debian:~/Documents/Git/Github/operation_linux$ ls
-docs  easyroam.sh  README.md
+
+```bash
+ls
 ```
 
+It should show the `docs` folder inside the directory
 **To build**
 
+```bash
+sphinx-build -M html docs/source/ docs/build/
 ```
-(.venv) gowtham@debian:~/Documents/Git/Github/operation_linux$ sphinx-build -M html docs/source/ docs/build/
-Running Sphinx v8.2.3
-loading translations [en]... done
-making output directory... done
-building [mo]: targets for 0 po files that are out of date
-writing output... 
-building [html]: targets for 1 source files that are out of date
-updating environment: [new config] 1 added, 0 changed, 0 removed
-reading sources... [100%] index
-looking for now-outdated files... none found
-pickling environment... done
-checking consistency... done
-preparing documents... done
-copying assets... 
-copying static files... 
-Writing evaluated template result to /home/gowtham/Documents/Git/Github/operation_linux/docs/build/html/_static/language_data.js
-Writing evaluated template result to /home/gowtham/Documents/Git/Github/operation_linux/docs/build/html/_static/basic.css
-Writing evaluated template result to /home/gowtham/Documents/Git/Github/operation_linux/docs/build/html/_static/documentation_options.js
-Writing evaluated template result to /home/gowtham/Documents/Git/Github/operation_linux/docs/build/html/_static/alabaster.css
-copying static files: done
-copying extra files... 
-copying extra files: done
-copying assets: done
-writing output... [100%] index
-generating indices... genindex done
-writing additional pages... search done
-dumping search index in English (code: en)... done
-dumping object inventory... done
-build succeeded.
-
-The HTML pages are in docs/build/html.
-```
-
-
 I have moved the `docs` inside `sphinx` because github can either deploy from `root` or `/docs`. I created a `docs` folder in main dir and copied the contents of `docs/build/html` to `docs`.
 
 We also need to add `.nojekyll` file inside `docs` so that the static files are served.
 
 Since I have written down all the docs in wiki as `markdown`, it is better to include a plugin that reads `.md` files. So install, `myst_parser`.
 
-Add the plugin to the conf.py file
+Add the plugin to the `conf.py` file
 
-```
+```python
 extensions = ["myst_parser",]
 
 source_suffix = {
@@ -119,7 +93,8 @@ source_suffix = {
 ```
 
 In `index.rst`, include the code to read the pages,
-```
+
+```bash
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -132,28 +107,26 @@ Create a folder called `pages` inside `sources` and copy paste all the `.md` fil
 
 Now run sphinx and copy all the files inside `build` to `docs` in the main dir. Add `.nojekyll` file inside `docs/` so that the static files are rendered.
 
-
-
-
 Clone the repo and set the url 
 
-`git remote set-url origin https://github.com/Gowtham-Mahendran/operation_linux.git`
+```bash
+git remote set-url origin <url>
+```
 
 Then, use 
 
-`git config credential.helper store`
+```bash
+git config credential.helper store
+```
 
 and enter the user name. For password enter the PAT generated from the Github
 
 Now you can push to the repo.
 
 To view the passwords, use
-
-`cat ~/.git-credentials` 
-
-
-
-
+```bash
+cat ~/.git-credentials
+```
 
 ## Git
 

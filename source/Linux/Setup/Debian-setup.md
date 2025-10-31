@@ -145,6 +145,7 @@ sudo apt install flatpak
 ```
 
 Add the flatpak repo [refer](https://flatpak.org/setup/Debian)
+
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```

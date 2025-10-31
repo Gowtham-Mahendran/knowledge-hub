@@ -1,6 +1,17 @@
+---
+title: "Fortescue's Theorem"
+date: 2025-11-01
+description: "Decomposition of unbalanced systems into symmetrical components"
+categories: [Power systems]
+tags: []
+draft: true
+hide:
+  - content
+---
+
 # Fortescue's Theorem
 
-Any 3 unbalanced vectors can be replaced by a set of 3 balanced system of vectors. These balanced vectors are equal in magnitude and equi-spaced.
+Any 3 unbalanced vectors can be replaced by a set of 3 balanced system of vectors. These balanced vectors are equal in magnitude and equi-spaced. <!-- more -->
 
 These are what symmetrical components.
 

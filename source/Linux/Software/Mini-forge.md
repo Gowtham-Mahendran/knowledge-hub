@@ -46,43 +46,44 @@ press `yes` in this case.
 
 - Successfully installed
 
-```bash
-no change     /home/gowtham/miniforge3/condabin/conda
-no change     /home/gowtham/miniforge3/bin/conda
-no change     /home/gowtham/miniforge3/bin/conda-env
-no change     /home/gowtham/miniforge3/bin/activate
-no change     /home/gowtham/miniforge3/bin/deactivate
-no change     /home/gowtham/miniforge3/etc/profile.d/conda.sh
-no change     /home/gowtham/miniforge3/etc/fish/conf.d/conda.fish
-no change     /home/gowtham/miniforge3/shell/condabin/Conda.psm1
-no change     /home/gowtham/miniforge3/shell/condabin/conda-hook.ps1
-no change     /home/gowtham/miniforge3/lib/python3.12/site-packages/xontrib/conda.xsh
-no change     /home/gowtham/miniforge3/etc/profile.d/conda.csh
-modified      /home/gowtham/.bashrc
+??? note "Installation Note"
+    ```text
+    no change     /home/gowtham/miniforge3/condabin/conda
+    no change     /home/gowtham/miniforge3/bin/conda
+    no change     /home/gowtham/miniforge3/bin/conda-env
+    no change     /home/gowtham/miniforge3/bin/activate
+    no change     /home/gowtham/miniforge3/bin/deactivate
+    no change     /home/gowtham/miniforge3/etc/profile.d/conda.sh
+    no change     /home/gowtham/miniforge3/etc/fish/conf.d/conda.fish
+    no change     /home/gowtham/miniforge3/shell/condabin/Conda.psm1
+    no change     /home/gowtham/miniforge3/shell/condabin/conda-hook.ps1
+    no change     /home/gowtham/miniforge3/lib/python3.12/site-packages/xontrib/conda.xsh
+    no change     /home/gowtham/miniforge3/etc/profile.d/conda.csh
+    modified      /home/gowtham/.bashrc
 
-==> For changes to take effect, close and re-open your current shell. <==
+    ==> For changes to take effect, close and re-open your current shell. <==
 
-Running `shell init`, which:
- - modifies RC file: "/home/gowtham/.bashrc"
- - generates config for root prefix: "/home/gowtham/miniforge3"
- - sets mamba executable to: "/home/gowtham/miniforge3/bin/mamba"
-The following has been added in your "/home/gowtham/.bashrc" file
+    Running `shell init`, which:
+    - modifies RC file: "/home/gowtham/.bashrc"
+    - generates config for root prefix: "/home/gowtham/miniforge3"
+    - sets mamba executable to: "/home/gowtham/miniforge3/bin/mamba"
+    The following has been added in your "/home/gowtham/.bashrc" file
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba shell init' !!
-export MAMBA_EXE='/home/gowtham/miniforge3/bin/mamba';
-export MAMBA_ROOT_PREFIX='/home/gowtham/miniforge3';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
+    # >>> mamba initialize >>>
+    # !! Contents within this block are managed by 'mamba shell init' !!
+    export MAMBA_EXE='/home/gowtham/miniforge3/bin/mamba';
+    export MAMBA_ROOT_PREFIX='/home/gowtham/miniforge3';
+    __mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__mamba_setup"
+    else
+        alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    fi
+    unset __mamba_setup
+    # <<< mamba initialize <<<
 
-Thank you for installing Miniforge3!
-```
+    Thank you for installing Miniforge3!
+    ```
 
 - Close terminal window (Konsole) and open a new one. *conda env base* can be seen.
 
