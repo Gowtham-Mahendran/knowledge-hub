@@ -5,8 +5,6 @@ description: "Decomposition of unbalanced systems into symmetrical components"
 categories: [Power systems]
 tags: []
 draft: true
-hide:
-  - content
 ---
 
 # Fortescue's Theorem

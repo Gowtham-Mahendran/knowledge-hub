@@ -1,6 +1,6 @@
 This guide documents the full process of replacing Windows with Debian 13 on an HP laptop, including BIOS setup, offline driver installation, and EasyRoam setup.
 
-## Booting Debian
+## 1. Booting Debian
 
 **Downloading and creating Debian bootable drive**
 
@@ -61,7 +61,7 @@ groups <username>
 This will show something like, `<username> : <username> cdrom floppy sudo audio dip video plugdev users netdev bluetooth lpadmin scanner`. Now `<username>` is a `superuser` or use `sudo whoami`.
 
 
-## Setting Up Debian Package Sources
+## 2. Setting Up Debian Package Sources
 
 
 Once you boot into the system, you need to add repositories so that Debian can fetch and install software packages from official sources.

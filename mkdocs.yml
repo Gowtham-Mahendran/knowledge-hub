@@ -73,19 +73,17 @@ nav:
     - Getting Started:
       - Debian-setup: Linux/Setup/Debian-setup.md
       - First Things First: Linux/Setup/First-things-First.md
-      - Common Problems: Linux/Setup/Common-problems.md
-    - System Setup:
-      - Customization: Linux/Customization/Customization.md
-      - Tweaks: Linux/Customization/Tweaks.md
+    - Customization:
+      - Terminal: Linux/Customization/Terminal.md
+      - Mail: Linux/Customization/Mail.md
     - Software:
-      - Docker: Linux/Software/Docker.md
-      - Mini-forge: Linux/Software/Mini-forge.md
-      - Matlab: Linux/Software/Matlab.md
-      - Codium: Linux/Software/Codium.md
-      - Zotero: Linux/Software/Zotero.md
-      - Kicad: Linux/Software/kicad.md
-    - Development:
-      - Git: Linux/Development/Git.md
+      - Productivity: Linux/Software/Productivity.md
+      - Development: Linux/Software/Development.md
+      - Engineering: Linux/Software/Engineering.md
+      - Networking: Linux/Software/Networking.md
+      - System-utils: Linux/Software/System-utils.md
+    - Misc:
+      - Formatting: Linux/Misc/Formatting.md
 
   - Power system:
     - Overview: Power_systems/index.md

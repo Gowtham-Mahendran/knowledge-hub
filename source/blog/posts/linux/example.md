@@ -7,4 +7,4 @@ tags: [celery, django, performance]
 draft: true
 ---
 
-Celery is a distributed task queue that lets you run asynchronous jobs...
+Celery is a distributed task queue that lets you run asynchronous jobs... <!-- more -->
