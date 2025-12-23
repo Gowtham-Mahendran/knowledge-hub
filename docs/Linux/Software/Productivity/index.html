@@ -780,6 +780,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#23-pdftk" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 pdftk
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1114,6 +1123,38 @@
 <h3 id="22-qpdf">2.2 qpdf</h3>
 <div class="highlight"><pre><span></span><code>qpdf<span class="w"> </span>--decrypt<span class="w"> </span>restricted-input.pdf<span class="w"> </span>unrestricted-output.pdf
 </code></pre></div>
+<h3 id="23-pdftk">2.3 pdftk</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>aptitude<span class="w"> </span>install<span class="w"> </span>pdftk
+</code></pre></div>
+<p>To rewrite document outline to a pdf document:</p>
+<ol>
+<li>
+<p>Read internal PDF info and Export it as editable text
+<div class="highlight"><pre><span></span><code>pdftk<span class="w"> </span>book.pdf<span class="w"> </span>dump_data<span class="w"> </span>&gt;<span class="w"> </span>meta.txt
+</code></pre></div></p>
+</li>
+<li>
+<p>In the end of <code>meta.txt</code> file, add bookmarks:
+<div class="highlight"><pre><span></span><code>BookmarkBegin
+BookmarkTitle:<span class="w"> </span>Chapter<span class="w"> </span><span class="m">1</span><span class="w"> </span>Introduction
+BookmarkLevel:<span class="w"> </span><span class="m">1</span>
+BookmarkPageNumber:<span class="w"> </span><span class="m">5</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Level-2 must come after Level-1
+<div class="highlight"><pre><span></span><code>BookmarkBegin
+BookmarkTitle:<span class="w"> </span><span class="m">3</span>.1<span class="w"> </span>Line<span class="w"> </span>Parameters
+BookmarkLevel:<span class="w"> </span><span class="m">2</span>
+BookmarkPageNumber:<span class="w"> </span><span class="m">85</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Rewrite and save back
+<div class="highlight"><pre><span></span><code>pdftk<span class="w"> </span>book.pdf<span class="w"> </span>update_info<span class="w"> </span>meta.txt<span class="w"> </span>output<span class="w"> </span>book_with_outline.pdf
+</code></pre></div></p>
+</li>
+</ol>
 <h2 id="3-latex">3. Latex</h2>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>aptitude<span class="w"> </span>install<span class="w"> </span>texlive-full
 </code></pre></div>

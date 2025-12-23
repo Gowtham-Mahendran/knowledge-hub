@@ -47,6 +47,40 @@ PDF will be created without a encrypt password.
 qpdf --decrypt restricted-input.pdf unrestricted-output.pdf
 ```
 
+### 2.3 pdftk
+
+```bash
+sudo aptitude install pdftk
+```
+
+To rewrite document outline to a pdf document:
+
+1. Read internal PDF info and Export it as editable text
+```bash
+pdftk book.pdf dump_data > meta.txt
+```
+
+2. In the end of `meta.txt` file, add bookmarks:
+```bash
+BookmarkBegin
+BookmarkTitle: Chapter 1 Introduction
+BookmarkLevel: 1
+BookmarkPageNumber: 5
+```
+
+3. Level-2 must come after Level-1
+```bash
+BookmarkBegin
+BookmarkTitle: 3.1 Line Parameters
+BookmarkLevel: 2
+BookmarkPageNumber: 85
+```
+
+4. Rewrite and save back
+```bash
+pdftk book.pdf update_info meta.txt output book_with_outline.pdf
+```
+
 ## 3. Latex
 
 ```bash
